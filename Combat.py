@@ -1,4 +1,4 @@
-import Pokemon, random
+import Pokemon, random, json
 
 type_table = 'type_chart.json'
 
