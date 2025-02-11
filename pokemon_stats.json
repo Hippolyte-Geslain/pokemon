@@ -1,0 +1,3291 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "nom": "Bulbizarre",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "SpAttack": 65,
+        "SpDefense": 65,
+        "Speed": 45
+      },
+      "description": "Bulbasaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
+      "image": "001.png"
+    },
+    {
+      "id": 2,
+      "nom": "Herbizarre",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 62,
+        "Defense": 63,
+        "SpAttack": 80,
+        "SpDefense": 80,
+        "Speed": 60
+      },
+      "description": "Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
+      "image": "002.png"
+    },
+    {
+      "id": 3,
+      "nom": "Florizarre",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 82,
+        "Defense": 83,
+        "SpAttack": 100,
+        "SpDefense": 100,
+        "Speed": 80
+      },
+      "description": "Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
+      "image": "003.png"
+    },
+    {
+      "id": 4,
+      "nom": "Salamèche",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 39,
+        "Attack": 52,
+        "Defense": 43,
+        "SpAttack": 60,
+        "SpDefense": 50,
+        "Speed": 65
+      },
+      "description": "Charmander is a Fire type Pokémon introduced in Generation 1. It is known as the Lizard Pokémon.",
+      "image": "004.png"
+    },
+    {
+      "id": 5,
+      "nom": "Reptincel",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 58,
+        "Attack": 64,
+        "Defense": 58,
+        "SpAttack": 80,
+        "SpDefense": 65,
+        "Speed": 80
+      },
+      "description": "Charmeleon is a Fire type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
+      "image": "005.png"
+    },
+    {
+      "id": 6,
+      "nom": "Dracaufeu",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 78,
+        "Attack": 84,
+        "Defense": 78,
+        "SpAttack": 109,
+        "SpDefense": 85,
+        "Speed": 100
+      },
+      "description": "Charizard is a Fire/Flying type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
+      "image": "006.png"
+    },
+    {
+      "id": 7,
+      "nom": "Carapuce",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 44,
+        "Attack": 48,
+        "Defense": 65,
+        "SpAttack": 50,
+        "SpDefense": 64,
+        "Speed": 43
+      },
+      "description": "Squirtle is a Water type Pokémon introduced in Generation 1. It is known as the Tiny Turtle Pokémon.",
+      "image": "007.png"
+    },
+    {
+      "id": 8,
+      "nom": "Carabaffe",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 59,
+        "Attack": 63,
+        "Defense": 80,
+        "SpAttack": 65,
+        "SpDefense": 80,
+        "Speed": 58
+      },
+      "description": "Wartortle is a Water type Pokémon introduced in Generation 1. It is known as the Turtle Pokémon.",
+      "image": "008.png"
+    },
+    {
+      "id": 9,
+      "nom": "Tortank",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 79,
+        "Attack": 83,
+        "Defense": 100,
+        "SpAttack": 85,
+        "SpDefense": 105,
+        "Speed": 78
+      },
+      "description": "Blastoise is a Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
+      "image": "009.png"
+    },
+    {
+      "id": 10,
+      "nom": "Chenipan",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 30,
+        "Defense": 35,
+        "SpAttack": 20,
+        "SpDefense": 20,
+        "Speed": 45
+      },
+      "description": "Caterpie is a Bug type Pokémon introduced in Generation 1. It is known as the Worm Pokémon.",
+      "image": "010.png"
+    },
+    {
+      "id": 11,
+      "nom": "Chrysacier",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 20,
+        "Defense": 55,
+        "SpAttack": 25,
+        "SpDefense": 25,
+        "Speed": 30
+      },
+      "description": "Metapod is a Bug type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.",
+      "image": "011.png"
+    },
+    {
+      "id": 12,
+      "nom": "Papilusion",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 45,
+        "Defense": 50,
+        "SpAttack": 90,
+        "SpDefense": 80,
+        "Speed": 70
+      },
+      "description": "Butterfree is a Bug/Flying type Pokémon introduced in Generation 1. It is known as the Butterfly Pokémon.",
+      "image": "012.png"
+    },
+    {
+      "id": 13,
+      "nom": "Aspicot",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 35,
+        "Defense": 30,
+        "SpAttack": 20,
+        "SpDefense": 20,
+        "Speed": 50
+      },
+      "description": "Weedle is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Hairy Bug Pokémon.",
+      "image": "013.png"
+    },
+    {
+      "id": 14,
+      "nom": "Coconfort",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 25,
+        "Defense": 50,
+        "SpAttack": 25,
+        "SpDefense": 25,
+        "Speed": 35
+      },
+      "description": "Kakuna is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.",
+      "image": "014.png"
+    },
+    {
+      "id": 15,
+      "nom": "Dardargnan",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 90,
+        "Defense": 40,
+        "SpAttack": 45,
+        "SpDefense": 80,
+        "Speed": 75
+      },
+      "description": "Beedrill is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Poison Bee Pokémon.",
+      "image": "015.png"
+    },
+    {
+      "id": 16,
+      "nom": "Roucool",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 45,
+        "Defense": 40,
+        "SpAttack": 35,
+        "SpDefense": 35,
+        "Speed": 56
+      },
+      "description": "Pidgey is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.",
+      "image": "016.png"
+    },
+    {
+      "id": 17,
+      "nom": "Roucoups",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 63,
+        "Attack": 60,
+        "Defense": 55,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 71
+      },
+      "description": "Pidgeotto is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Bird Pokémon.",
+      "image": "017.png"
+    },
+    {
+      "id": 18,
+      "nom": "Roucarnage",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 83,
+        "Attack": 80,
+        "Defense": 75,
+        "SpAttack": 70,
+        "SpDefense": 70,
+        "Speed": 101
+      },
+      "description": "Pidgeot is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Bird Pokémon.",
+      "image": "018.png"
+    },
+    {
+      "id": 19,
+      "nom": "Rattata",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 56,
+        "Defense": 35,
+        "SpAttack": 25,
+        "SpDefense": 35,
+        "Speed": 72
+      },
+      "description": "Rattata is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "019.png"
+    },
+    {
+      "id": 20,
+      "nom": "Rattatac",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 81,
+        "Defense": 60,
+        "SpAttack": 50,
+        "SpDefense": 70,
+        "Speed": 97
+      },
+      "description": "Raticate is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "020.png"
+    },
+    {
+      "id": 21,
+      "nom": "Piafabec",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 60,
+        "Defense": 30,
+        "SpAttack": 31,
+        "SpDefense": 31,
+        "Speed": 70
+      },
+      "description": "Spearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.",
+      "image": "021.png"
+    },
+    {
+      "id": 22,
+      "nom": "Rapasdepic",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 90,
+        "Defense": 65,
+        "SpAttack": 61,
+        "SpDefense": 61,
+        "Speed": 100
+      },
+      "description": "Fearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Beak Pokémon.",
+      "image": "022.png"
+    },
+    {
+      "id": 23,
+      "nom": "Abo",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 60,
+        "Defense": 44,
+        "SpAttack": 40,
+        "SpDefense": 54,
+        "Speed": 55
+      },
+      "description": "Ekans is a Poison type Pokémon introduced in Generation 1. It is known as the Snake Pokémon.",
+      "image": "023.png"
+    },
+    {
+      "id": 24,
+      "nom": "Arbok",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 95,
+        "Defense": 69,
+        "SpAttack": 65,
+        "SpDefense": 79,
+        "Speed": 80
+      },
+      "description": "Arbok is a Poison type Pokémon introduced in Generation 1. It is known as the Cobra Pokémon.",
+      "image": "024.png"
+    },
+    {
+      "id": 25,
+      "nom": "Pikachu",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 55,
+        "Defense": 40,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 90
+      },
+      "description": "Pikachu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "025.png"
+    },
+    {
+      "id": 26,
+      "nom": "Raichu",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 90,
+        "Defense": 55,
+        "SpAttack": 90,
+        "SpDefense": 80,
+        "Speed": 110
+      },
+      "description": "Raichu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "026.png"
+    },
+    {
+      "id": 27,
+      "nom": "Sabelette",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 75,
+        "Defense": 85,
+        "SpAttack": 20,
+        "SpDefense": 30,
+        "Speed": 40
+      },
+      "description": "Sandshrew is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "027.png"
+    },
+    {
+      "id": 28,
+      "nom": "Sablaireau",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 75,
+        "Attack": 100,
+        "Defense": 110,
+        "SpAttack": 45,
+        "SpDefense": 55,
+        "Speed": 65
+      },
+      "description": "Sandslash is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
+      "image": "028.png"
+    },
+    {
+      "id": 29,
+      "nom": "Nidoran♀",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 47,
+        "Defense": 52,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 41
+      },
+      "description": "Nidoran♀ is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
+      "image": "029.png"
+    },
+    {
+      "id": 30,
+      "nom": "Nidorina",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 62,
+        "Defense": 67,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 56
+      },
+      "description": "Nidorina is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
+      "image": "030.png"
+    },
+    {
+      "id": 31,
+      "nom": "Nidoqueen",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 92,
+        "Defense": 87,
+        "SpAttack": 75,
+        "SpDefense": 85,
+        "Speed": 76
+      },
+      "description": "Nidoqueen is a Poison/Ground type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
+      "image": "031.png"
+    },
+    {
+      "id": 32,
+      "nom": "Nidoran♂",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 46,
+        "Attack": 57,
+        "Defense": 40,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 50
+      },
+      "description": "Nidoran♂ is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
+      "image": "032.png"
+    },
+    {
+      "id": 33,
+      "nom": "Nidorino",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 61,
+        "Attack": 72,
+        "Defense": 57,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 65
+      },
+      "description": "Nidorino is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
+      "image": "033.png"
+    },
+    {
+      "id": 34,
+      "nom": "Nidoking",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 81,
+        "Attack": 102,
+        "Defense": 77,
+        "SpAttack": 85,
+        "SpDefense": 75,
+        "Speed": 85
+      },
+      "description": "Nidoking is a Poison/Ground type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
+      "image": "034.png"
+    },
+    {
+      "id": 35,
+      "nom": "Mélofée",
+      "types": [
+        {
+          "nom": "Fée",
+          "couleur": "pink lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 45,
+        "Defense": 48,
+        "SpAttack": 60,
+        "SpDefense": 65,
+        "Speed": 35
+      },
+      "description": "Clefairy is a Fairy type Pokémon introduced in Generation 1. It is known as the Fairy Pokémon.",
+      "image": "035.png"
+    },
+    {
+      "id": 36,
+      "nom": "Mélodelfe",
+      "types": [
+        {
+          "nom": "Fée",
+          "couleur": "pink lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 95,
+        "Attack": 70,
+        "Defense": 73,
+        "SpAttack": 95,
+        "SpDefense": 90,
+        "Speed": 60
+      },
+      "description": "Clefable is a Fairy type Pokémon introduced in Generation 1. It is known as the Fairy Pokémon.",
+      "image": "036.png"
+    },
+    {
+      "id": 37,
+      "nom": "Goupix",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 38,
+        "Attack": 41,
+        "Defense": 40,
+        "SpAttack": 50,
+        "SpDefense": 65,
+        "Speed": 65
+      },
+      "description": "Vulpix is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.",
+      "image": "037.png"
+    },
+    {
+      "id": 38,
+      "nom": "Feunard",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 73,
+        "Attack": 76,
+        "Defense": 75,
+        "SpAttack": 81,
+        "SpDefense": 100,
+        "Speed": 100
+      },
+      "description": "Ninetales is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.",
+      "image": "038.png"
+    },
+    {
+      "id": 39,
+      "nom": "Rondoudou",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Fée",
+          "couleur": "pink lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 115,
+        "Attack": 45,
+        "Defense": 20,
+        "SpAttack": 45,
+        "SpDefense": 25,
+        "Speed": 20
+      },
+      "description": "Jigglypuff is a Normal/Fairy type Pokémon introduced in Generation 1. It is known as the Balloon Pokémon.",
+      "image": "039.png"
+    },
+    {
+      "id": 40,
+      "nom": "Grodoudou",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Fée",
+          "couleur": "pink lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 140,
+        "Attack": 70,
+        "Defense": 45,
+        "SpAttack": 85,
+        "SpDefense": 50,
+        "Speed": 45
+      },
+      "description": "Wigglytuff is a Normal/Fairy type Pokémon introduced in Generation 1. It is known as the Balloon Pokémon.",
+      "image": "040.png"
+    },
+    {
+      "id": 41,
+      "nom": "Nosferapti",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 45,
+        "Defense": 35,
+        "SpAttack": 30,
+        "SpDefense": 40,
+        "Speed": 55
+      },
+      "description": "Zubat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.",
+      "image": "041.png"
+    },
+    {
+      "id": 42,
+      "nom": "Nosferalto",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 75,
+        "Attack": 80,
+        "Defense": 70,
+        "SpAttack": 65,
+        "SpDefense": 75,
+        "Speed": 90
+      },
+      "description": "Golbat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.",
+      "image": "042.png"
+    },
+    {
+      "id": 43,
+      "nom": "Mystherbe",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 50,
+        "Defense": 55,
+        "SpAttack": 75,
+        "SpDefense": 65,
+        "Speed": 30
+      },
+      "description": "Oddish is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.",
+      "image": "043.png"
+    },
+    {
+      "id": 44,
+      "nom": "Ortide",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 65,
+        "Defense": 70,
+        "SpAttack": 85,
+        "SpDefense": 75,
+        "Speed": 40
+      },
+      "description": "Gloom is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.",
+      "image": "044.png"
+    },
+    {
+      "id": 45,
+      "nom": "Rafflesia",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 75,
+        "Attack": 80,
+        "Defense": 85,
+        "SpAttack": 110,
+        "SpDefense": 90,
+        "Speed": 50
+      },
+      "description": "Vileplume is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.",
+      "image": "045.png"
+    },
+    {
+      "id": 46,
+      "nom": "Paras",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 70,
+        "Defense": 55,
+        "SpAttack": 45,
+        "SpDefense": 55,
+        "Speed": 25
+      },
+      "description": "Paras is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.",
+      "image": "046.png"
+    },
+    {
+      "id": 47,
+      "nom": "Parasect",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 95,
+        "Defense": 80,
+        "SpAttack": 60,
+        "SpDefense": 80,
+        "Speed": 30
+      },
+      "description": "Parasect is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.",
+      "image": "047.png"
+    },
+    {
+      "id": 48,
+      "nom": "Mimitoss",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 55,
+        "Defense": 50,
+        "SpAttack": 40,
+        "SpDefense": 55,
+        "Speed": 45
+      },
+      "description": "Venonat is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Insect Pokémon.",
+      "image": "048.png"
+    },
+    {
+      "id": 49,
+      "nom": "Aéromite",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 65,
+        "Defense": 60,
+        "SpAttack": 90,
+        "SpDefense": 75,
+        "Speed": 90
+      },
+      "description": "Venomoth is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Poison Moth Pokémon.",
+      "image": "049.png"
+    },
+    {
+      "id": 50,
+      "nom": "Taupiqueur",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 10,
+        "Attack": 55,
+        "Defense": 25,
+        "SpAttack": 35,
+        "SpDefense": 45,
+        "Speed": 95
+      },
+      "description": "Diglett is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
+      "image": "050.png"
+    },
+    {
+      "id": 51,
+      "nom": "Triopikeur",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 100,
+        "Defense": 50,
+        "SpAttack": 50,
+        "SpDefense": 70,
+        "Speed": 120
+      },
+      "description": "Dugtrio is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
+      "image": "051.png"
+    },
+    {
+      "id": 52,
+      "nom": "Miaouss",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 45,
+        "Defense": 35,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 90
+      },
+      "description": "Meowth is a Normal type Pokémon introduced in Generation 1. It is known as the Scratch Cat Pokémon.",
+      "image": "052.png"
+    },
+    {
+      "id": 53,
+      "nom": "Persian",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 70,
+        "Defense": 60,
+        "SpAttack": 65,
+        "SpDefense": 65,
+        "Speed": 115
+      },
+      "description": "Persian is a Normal type Pokémon introduced in Generation 1. It is known as the Classy Cat Pokémon.",
+      "image": "053.png"
+    },
+    {
+      "id": 54,
+      "nom": "Psykokwak",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 52,
+        "Defense": 48,
+        "SpAttack": 65,
+        "SpDefense": 50,
+        "Speed": 55
+      },
+      "description": "Psyduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.",
+      "image": "054.png"
+    },
+    {
+      "id": 55,
+      "nom": "Akwakwak",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 82,
+        "Defense": 78,
+        "SpAttack": 95,
+        "SpDefense": 80,
+        "Speed": 85
+      },
+      "description": "Golduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.",
+      "image": "055.png"
+    },
+    {
+      "id": 56,
+      "nom": "Férosinge",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 80,
+        "Defense": 35,
+        "SpAttack": 35,
+        "SpDefense": 45,
+        "Speed": 70
+      },
+      "description": "Mankey is a Fighting type Pokémon introduced in Generation 1. It is known as the Pig Monkey Pokémon.",
+      "image": "056.png"
+    },
+    {
+      "id": 57,
+      "nom": "Colossinge",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 105,
+        "Defense": 60,
+        "SpAttack": 60,
+        "SpDefense": 70,
+        "Speed": 95
+      },
+      "description": "Primeape is a Fighting type Pokémon introduced in Generation 1. It is known as the Pig Monkey Pokémon.",
+      "image": "057.png"
+    },
+    {
+      "id": 58,
+      "nom": "Caninos",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 70,
+        "Defense": 45,
+        "SpAttack": 70,
+        "SpDefense": 50,
+        "Speed": 60
+      },
+      "description": "Growlithe is a Fire type Pokémon introduced in Generation 1. It is known as the Puppy Pokémon.",
+      "image": "058.png"
+    },
+    {
+      "id": 59,
+      "nom": "Arcanin",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 110,
+        "Defense": 80,
+        "SpAttack": 100,
+        "SpDefense": 80,
+        "Speed": 95
+      },
+      "description": "Arcanine is a Fire type Pokémon introduced in Generation 1. It is known as the Legendary Pokémon.",
+      "image": "059.png"
+    },
+    {
+      "id": 60,
+      "nom": "Ptitard",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 50,
+        "Defense": 40,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 90
+      },
+      "description": "Poliwag is a Water type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
+      "image": "060.png"
+    },
+    {
+      "id": 61,
+      "nom": "Têtarte",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 65,
+        "Defense": 65,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 90
+      },
+      "description": "Poliwhirl is a Water type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
+      "image": "061.png"
+    },
+    {
+      "id": 62,
+      "nom": "Tartard",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 95,
+        "Defense": 95,
+        "SpAttack": 70,
+        "SpDefense": 90,
+        "Speed": 70
+      },
+      "description": "Poliwrath is a Water/Fighting type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
+      "image": "062.png"
+    },
+    {
+      "id": 63,
+      "nom": "Abra",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 25,
+        "Attack": 20,
+        "Defense": 15,
+        "SpAttack": 105,
+        "SpDefense": 55,
+        "Speed": 90
+      },
+      "description": "Abra is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
+      "image": "063.png"
+    },
+    {
+      "id": 64,
+      "nom": "Kadabra",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 35,
+        "Defense": 30,
+        "SpAttack": 120,
+        "SpDefense": 70,
+        "Speed": 105
+      },
+      "description": "Kadabra is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
+      "image": "064.png"
+    },
+    {
+      "id": 65,
+      "nom": "Alakazam",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 50,
+        "Defense": 45,
+        "SpAttack": 135,
+        "SpDefense": 95,
+        "Speed": 120
+      },
+      "description": "Alakazam is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
+      "image": "065.png"
+    },
+    {
+      "id": 66,
+      "nom": "Machoc",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 80,
+        "Defense": 50,
+        "SpAttack": 35,
+        "SpDefense": 35,
+        "Speed": 35
+      },
+      "description": "Machop is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
+      "image": "066.png"
+    },
+    {
+      "id": 67,
+      "nom": "Machopeur",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 100,
+        "Defense": 70,
+        "SpAttack": 50,
+        "SpDefense": 60,
+        "Speed": 45
+      },
+      "description": "Machoke is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
+      "image": "067.png"
+    },
+    {
+      "id": 68,
+      "nom": "Mackogneur",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 130,
+        "Defense": 80,
+        "SpAttack": 65,
+        "SpDefense": 85,
+        "Speed": 55
+      },
+      "description": "Machamp is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
+      "image": "068.png"
+    },
+    {
+      "id": 69,
+      "nom": "Chétiflor",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 75,
+        "Defense": 35,
+        "SpAttack": 70,
+        "SpDefense": 30,
+        "Speed": 40
+      },
+      "description": "Bellsprout is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.",
+      "image": "069.png"
+    },
+    {
+      "id": 70,
+      "nom": "Boustiflor",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 90,
+        "Defense": 50,
+        "SpAttack": 85,
+        "SpDefense": 45,
+        "Speed": 55
+      },
+      "description": "Weepinbell is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flycatcher Pokémon.",
+      "image": "070.png"
+    },
+    {
+      "id": 71,
+      "nom": "Empiflor",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 105,
+        "Defense": 65,
+        "SpAttack": 100,
+        "SpDefense": 70,
+        "Speed": 70
+      },
+      "description": "Victreebel is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flycatcher Pokémon.",
+      "image": "071.png"
+    },
+    {
+      "id": 72,
+      "nom": "Tentacool",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 40,
+        "Defense": 35,
+        "SpAttack": 50,
+        "SpDefense": 100,
+        "Speed": 70
+      },
+      "description": "Tentacool is a Water/Poison type Pokémon introduced in Generation 1. It is known as the Jellyfish Pokémon.",
+      "image": "072.png"
+    },
+    {
+      "id": 73,
+      "nom": "Tentacruel",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 70,
+        "Defense": 65,
+        "SpAttack": 80,
+        "SpDefense": 120,
+        "Speed": 100
+      },
+      "description": "Tentacruel is a Water/Poison type Pokémon introduced in Generation 1. It is known as the Jellyfish Pokémon.",
+      "image": "073.png"
+    },
+    {
+      "id": 74,
+      "nom": "Racaillou",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 80,
+        "Defense": 100,
+        "SpAttack": 30,
+        "SpDefense": 30,
+        "Speed": 20
+      },
+      "description": "Geodude is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
+      "image": "074.png"
+    },
+    {
+      "id": 75,
+      "nom": "Gravalanch",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 95,
+        "Defense": 115,
+        "SpAttack": 45,
+        "SpDefense": 45,
+        "Speed": 35
+      },
+      "description": "Graveler is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
+      "image": "075.png"
+    },
+    {
+      "id": 76,
+      "nom": "Grolem",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 120,
+        "Defense": 130,
+        "SpAttack": 55,
+        "SpDefense": 65,
+        "Speed": 45
+      },
+      "description": "Golem is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Megaton Pokémon.",
+      "image": "076.png"
+    },
+    {
+      "id": 77,
+      "nom": "Ponyta",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 85,
+        "Defense": 55,
+        "SpAttack": 65,
+        "SpDefense": 65,
+        "Speed": 90
+      },
+      "description": "Ponyta is a Fire type Pokémon introduced in Generation 1. It is known as the Fire Horse Pokémon.",
+      "image": "077.png"
+    },
+    {
+      "id": 78,
+      "nom": "Galopa",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 100,
+        "Defense": 70,
+        "SpAttack": 80,
+        "SpDefense": 80,
+        "Speed": 105
+      },
+      "description": "Rapidash is a Fire type Pokémon introduced in Generation 1. It is known as the Fire Horse Pokémon.",
+      "image": "078.png"
+    },
+    {
+      "id": 79,
+      "nom": "Ramoloss",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 65,
+        "Defense": 65,
+        "SpAttack": 40,
+        "SpDefense": 40,
+        "Speed": 15
+      },
+      "description": "Slowpoke is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Dopey Pokémon.",
+      "image": "079.png"
+    },
+    {
+      "id": 80,
+      "nom": "Flagadoss",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 95,
+        "Attack": 75,
+        "Defense": 110,
+        "SpAttack": 100,
+        "SpDefense": 80,
+        "Speed": 30
+      },
+      "description": "Slowbro is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Hermit Crab Pokémon.",
+      "image": "080.png"
+    },
+    {
+      "id": 81,
+      "nom": "Magnéti",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        },
+        {
+          "nom": "Acier",
+          "couleur": "blue-grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 25,
+        "Attack": 35,
+        "Defense": 70,
+        "SpAttack": 95,
+        "SpDefense": 55,
+        "Speed": 45
+      },
+      "description": "Magnemite is an Electric/Steel type Pokémon introduced in Generation 1. It is known as the Magnet Pokémon.",
+      "image": "081.png"
+    },
+    {
+      "id": 82,
+      "nom": "Magnéton",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        },
+        {
+          "nom": "Acier",
+          "couleur": "blue-grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 60,
+        "Defense": 95,
+        "SpAttack": 120,
+        "SpDefense": 70,
+        "Speed": 70
+      },
+      "description": "Magneton is an Electric/Steel type Pokémon introduced in Generation 1. It is known as the Magnet Pokémon.",
+      "image": "082.png"
+    },
+    {
+      "id": 83,
+      "nom": "Canarticho",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 52,
+        "Attack": 90,
+        "Defense": 55,
+        "SpAttack": 58,
+        "SpDefense": 62,
+        "Speed": 60
+      },
+      "description": "Farfetch'd is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Wild Duck Pokémon.",
+      "image": "083.png"
+    },
+    {
+      "id": 84,
+      "nom": "Doduo",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 85,
+        "Defense": 45,
+        "SpAttack": 35,
+        "SpDefense": 35,
+        "Speed": 75
+      },
+      "description": "Doduo is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Twin Bird Pokémon.",
+      "image": "084.png"
+    },
+    {
+      "id": 85,
+      "nom": "Dodrio",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 110,
+        "Defense": 70,
+        "SpAttack": 60,
+        "SpDefense": 60,
+        "Speed": 110
+      },
+      "description": "Dodrio is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Triple Bird Pokémon.",
+      "image": "085.png"
+    },
+    {
+      "id": 86,
+      "nom": "Otaria",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 45,
+        "Defense": 55,
+        "SpAttack": 45,
+        "SpDefense": 70,
+        "Speed": 45
+      },
+      "description": "Seel is a Water type Pokémon introduced in Generation 1. It is known as the Sea Lion Pokémon.",
+      "image": "086.png"
+    },
+    {
+      "id": 87,
+      "nom": "Lamantine",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Glace",
+          "couleur": "cyan lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 70,
+        "Defense": 80,
+        "SpAttack": 70,
+        "SpDefense": 95,
+        "Speed": 70
+      },
+      "description": "Dewgong is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Sea Lion Pokémon.",
+      "image": "087.png"
+    },
+    {
+      "id": 88,
+      "nom": "Tadmorv",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 80,
+        "Defense": 50,
+        "SpAttack": 40,
+        "SpDefense": 50,
+        "Speed": 25
+      },
+      "description": "Grimer is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.",
+      "image": "088.png"
+    },
+    {
+      "id": 89,
+      "nom": "Grotadmorv",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 105,
+        "Attack": 105,
+        "Defense": 75,
+        "SpAttack": 65,
+        "SpDefense": 100,
+        "Speed": 50
+      },
+      "description": "Muk is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.",
+      "image": "089.png"
+    },
+    {
+      "id": 90,
+      "nom": "Kokiyas",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 65,
+        "Defense": 100,
+        "SpAttack": 45,
+        "SpDefense": 25,
+        "Speed": 40
+      },
+      "description": "Shellder is a Water type Pokémon introduced in Generation 1. It is known as the Bivalve Pokémon.",
+      "image": "090.png"
+    },
+    {
+      "id": 91,
+      "nom": "Crustabri",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Glace",
+          "couleur": "cyan lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 95,
+        "Defense": 180,
+        "SpAttack": 85,
+        "SpDefense": 45,
+        "Speed": 70
+      },
+      "description": "Cloyster is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Bivalve Pokémon.",
+      "image": "091.png"
+    },
+    {
+      "id": 92,
+      "nom": "Fantominus",
+      "types": [
+        {
+          "nom": "Spectre",
+          "couleur": "deep-purple lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 35,
+        "Defense": 30,
+        "SpAttack": 100,
+        "SpDefense": 35,
+        "Speed": 80
+      },
+      "description": "Gastly is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Gas Pokémon.",
+      "image": "092.png"
+    },
+    {
+      "id": 93,
+      "nom": "Spectrum",
+      "types": [
+        {
+          "nom": "Spectre",
+          "couleur": "deep-purple lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 50,
+        "Defense": 45,
+        "SpAttack": 115,
+        "SpDefense": 55,
+        "Speed": 95
+      },
+      "description": "Haunter is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Gas Pokémon.",
+      "image": "093.png"
+    },
+    {
+      "id": 94,
+      "nom": "Ectoplasma",
+      "types": [
+        {
+          "nom": "Spectre",
+          "couleur": "deep-purple lighten-1"
+        },
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 65,
+        "Defense": 60,
+        "SpAttack": 130,
+        "SpDefense": 75,
+        "Speed": 110
+      },
+      "description": "Gengar is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Shadow Pokémon.",
+      "image": "094.png"
+    },
+    {
+      "id": 95,
+      "nom": "Onix",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 45,
+        "Defense": 160,
+        "SpAttack": 30,
+        "SpDefense": 45,
+        "Speed": 70
+      },
+      "description": "Onix is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Snake Pokémon.",
+      "image": "095.png"
+    },
+    {
+      "id": 96,
+      "nom": "Soporifik",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 48,
+        "Defense": 45,
+        "SpAttack": 43,
+        "SpDefense": 90,
+        "Speed": 42
+      },
+      "description": "Drowzee is a Psychic type Pokémon introduced in Generation 1. It is known as the Hypnosis Pokémon.",
+      "image": "096.png"
+    },
+    {
+      "id": 97,
+      "nom": "Hypnomade",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 85,
+        "Attack": 73,
+        "Defense": 70,
+        "SpAttack": 73,
+        "SpDefense": 115,
+        "Speed": 67
+      },
+      "description": "Hypno is a Psychic type Pokémon introduced in Generation 1. It is known as the Hypnosis Pokémon.",
+      "image": "097.png"
+    },
+    {
+      "id": 98,
+      "nom": "Krabby",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 105,
+        "Defense": 90,
+        "SpAttack": 25,
+        "SpDefense": 25,
+        "Speed": 50
+      },
+      "description": "Krabby is a Water type Pokémon introduced in Generation 1. It is known as the River Crab Pokémon.",
+      "image": "098.png"
+    },
+    {
+      "id": 99,
+      "nom": "Krabboss",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 130,
+        "Defense": 115,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 75
+      },
+      "description": "Kingler is a Water type Pokémon introduced in Generation 1. It is known as the Pincer Pokémon.",
+      "image": "099.png"
+    },
+    {
+      "id": 100,
+      "nom": "Voltorbe",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 30,
+        "Defense": 50,
+        "SpAttack": 55,
+        "SpDefense": 55,
+        "Speed": 100
+      },
+      "description": "Voltorb is an Electric type Pokémon introduced in Generation 1. It is known as the Ball Pokémon.",
+      "image": "100.png"
+    },
+    {
+      "id": 101,
+      "nom": "Électrode",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 50,
+        "Defense": 70,
+        "SpAttack": 80,
+        "SpDefense": 80,
+        "Speed": 150
+      },
+      "description": "Electrode is an Electric type Pokémon introduced in Generation 1. It is known as the Ball Pokémon.",
+      "image": "101.png"
+    },
+    {
+      "id": 102,
+      "nom": "Noeunoeuf",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 40,
+        "Defense": 80,
+        "SpAttack": 60,
+        "SpDefense": 45,
+        "Speed": 40
+      },
+      "description": "Exeggcute is a Grass/Psychic type Pokémon introduced in Generation 1. It is known as the Egg Pokémon.",
+      "image": "102.png"
+    },
+    {
+      "id": 103,
+      "nom": "Noadkoko",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 95,
+        "Attack": 95,
+        "Defense": 85,
+        "SpAttack": 125,
+        "SpDefense": 75,
+        "Speed": 55
+      },
+      "description": "Exeggutor is a Grass/Psychic type Pokémon introduced in Generation 1. It is known as the Coconut Pokémon.",
+      "image": "103.png"
+    },
+    {
+      "id": 104,
+      "nom": "Osselait",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 50,
+        "Defense": 95,
+        "SpAttack": 40,
+        "SpDefense": 50,
+        "Speed": 35
+      },
+      "description": "Cubone is a Ground type Pokémon introduced in Generation 1. It is known as the Lonely Pokémon.",
+      "image": "104.png"
+    },
+    {
+      "id": 105,
+      "nom": "Ossatueur",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 80,
+        "Defense": 110,
+        "SpAttack": 50,
+        "SpDefense": 80,
+        "Speed": 45
+      },
+      "description": "Marowak is a Ground type Pokémon introduced in Generation 1. It is known as the Bone Keeper Pokémon.",
+      "image": "105.png"
+    },
+    {
+      "id": 106,
+      "nom": "Kicklee",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 120,
+        "Defense": 53,
+        "SpAttack": 35,
+        "SpDefense": 110,
+        "Speed": 87
+      },
+      "description": "Hitmonlee is a Fighting type Pokémon introduced in Generation 1. It is known as the Kicking Pokémon.",
+      "image": "106.png"
+    },
+    {
+      "id": 107,
+      "nom": "Tygnon",
+      "types": [
+        {
+          "nom": "Combat",
+          "couleur": "deep-orange darken-4"
+        }
+      ],
+      "base": {
+        "HP": 50,
+        "Attack": 105,
+        "Defense": 79,
+        "SpAttack": 35,
+        "SpDefense": 110,
+        "Speed": 76
+      },
+      "description": "Hitmonchan is a Fighting type Pokémon introduced in Generation 1. It is known as the Punching Pokémon.",
+      "image": "107.png"
+    },
+    {
+      "id": 108,
+      "nom": "Excelangue",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 55,
+        "Defense": 75,
+        "SpAttack": 60,
+        "SpDefense": 75,
+        "Speed": 30
+      },
+      "description": "Lickitung is a Normal type Pokémon introduced in Generation 1. It is known as the Licking Pokémon.",
+      "image": "108.png"
+    },
+    {
+      "id": 109,
+      "nom": "Smogo",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 65,
+        "Defense": 95,
+        "SpAttack": 60,
+        "SpDefense": 45,
+        "Speed": 35
+      },
+      "description": "Koffing is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Gas Pokémon.",
+      "image": "109.png"
+    },
+    {
+      "id": 110,
+      "nom": "Smogogo",
+      "types": [
+        {
+          "nom": "Poison",
+          "couleur": "purple lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 90,
+        "Defense": 120,
+        "SpAttack": 85,
+        "SpDefense": 70,
+        "Speed": 60
+      },
+      "description": "Weezing is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Gas Pokémon.",
+      "image": "110.png"
+    },
+    {
+      "id": 111,
+      "nom": "Rhinocorne",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        },
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 85,
+        "Defense": 95,
+        "SpAttack": 30,
+        "SpDefense": 30,
+        "Speed": 25
+      },
+      "description": "Rhyhorn is a Ground/Rock type Pokémon introduced in Generation 1. It is known as the Spikes Pokémon.",
+      "image": "111.png"
+    },
+    {
+      "id": 112,
+      "nom": "Rhinoféros",
+      "types": [
+        {
+          "nom": "Sol",
+          "couleur": "amber accent-2"
+        },
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        }
+      ],
+      "base": {
+        "HP": 105,
+        "Attack": 130,
+        "Defense": 120,
+        "SpAttack": 45,
+        "SpDefense": 45,
+        "Speed": 40
+      },
+      "description": "Rhydon is a Ground/Rock type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
+      "image": "112.png"
+    },
+    {
+      "id": 113,
+      "nom": "Leveinard",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 250,
+        "Attack": 5,
+        "Defense": 5,
+        "SpAttack": 35,
+        "SpDefense": 105,
+        "Speed": 50
+      },
+      "description": "Chansey is a Normal type Pokémon introduced in Generation 1. It is known as the Egg Pokémon.",
+      "image": "113.png"
+    },
+    {
+      "id": 114,
+      "nom": "Saquedeneu",
+      "types": [
+        {
+          "nom": "Plante",
+          "couleur": "green lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 55,
+        "Defense": 115,
+        "SpAttack": 100,
+        "SpDefense": 40,
+        "Speed": 60
+      },
+      "description": "Tangela is a Grass type Pokémon introduced in Generation 1. It is known as the Vine Pokémon.",
+      "image": "114.png"
+    },
+    {
+      "id": 115,
+      "nom": "Kangourex",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 105,
+        "Attack": 95,
+        "Defense": 80,
+        "SpAttack": 40,
+        "SpDefense": 80,
+        "Speed": 90
+      },
+      "description": "Kangaskhan is a Normal type Pokémon introduced in Generation 1. It is known as the Parent Pokémon.",
+      "image": "115.png"
+    },
+    {
+      "id": 116,
+      "nom": "Hypotrempe",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 40,
+        "Defense": 70,
+        "SpAttack": 70,
+        "SpDefense": 25,
+        "Speed": 60
+      },
+      "description": "Horsea is a Water type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
+      "image": "116.png"
+    },
+    {
+      "id": 117,
+      "nom": "Hypocéan",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 65,
+        "Defense": 95,
+        "SpAttack": 95,
+        "SpDefense": 45,
+        "Speed": 85
+      },
+      "description": "Seadra is a Water type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
+      "image": "117.png"
+    },
+    {
+      "id": 118,
+      "nom": "Poissirène",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 67,
+        "Defense": 60,
+        "SpAttack": 35,
+        "SpDefense": 50,
+        "Speed": 63
+      },
+      "description": "Goldeen is a Water type Pokémon introduced in Generation 1. It is known as the Goldfish Pokémon.",
+      "image": "118.png"
+    },
+    {
+      "id": 119,
+      "nom": "Poissoroy",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 92,
+        "Defense": 65,
+        "SpAttack": 65,
+        "SpDefense": 80,
+        "Speed": 68
+      },
+      "description": "Seaking is a Water type Pokémon introduced in Generation 1. It is known as the Goldfish Pokémon.",
+      "image": "119.png"
+    },
+    {
+      "id": 120,
+      "nom": "Stari",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 45,
+        "Defense": 55,
+        "SpAttack": 70,
+        "SpDefense": 55,
+        "Speed": 85
+      },
+      "description": "Staryu is a Water type Pokémon introduced in Generation 1. It is known as the Star Shape Pokémon.",
+      "image": "120.png"
+    },
+    {
+      "id": 121,
+      "nom": "Staross",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 75,
+        "Defense": 85,
+        "SpAttack": 100,
+        "SpDefense": 85,
+        "Speed": 115
+      },
+      "description": "Starmie is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Mysterious Pokémon.",
+      "image": "121.png"
+    },
+    {
+      "id": 122,
+      "nom": "M. Mime",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        },
+        {
+          "nom": "Fée",
+          "couleur": "pink lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 40,
+        "Attack": 45,
+        "Defense": 65,
+        "SpAttack": 100,
+        "SpDefense": 120,
+        "Speed": 90
+      },
+      "description": "Mr. Mime is a Psychic/Fairy type Pokémon introduced in Generation 1. It is known as the Barrier Pokémon.",
+      "image": "122.png"
+    },
+    {
+      "id": 123,
+      "nom": "Insécateur",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 110,
+        "Defense": 80,
+        "SpAttack": 55,
+        "SpDefense": 80,
+        "Speed": 105
+      },
+      "description": "Scyther is a Bug/Flying type Pokémon introduced in Generation 1. It is known as the Mantis Pokémon.",
+      "image": "123.png"
+    },
+    {
+      "id": 124,
+      "nom": "Lippoutou",
+      "types": [
+        {
+          "nom": "Glace",
+          "couleur": "cyan lighten-1"
+        },
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 50,
+        "Defense": 35,
+        "SpAttack": 115,
+        "SpDefense": 95,
+        "Speed": 95
+      },
+      "description": "Jynx is an Ice/Psychic type Pokémon introduced in Generation 1. It is known as the Human Shape Pokémon.",
+      "image": "124.png"
+    },
+    {
+      "id": 125,
+      "nom": "Élektek",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 83,
+        "Defense": 57,
+        "SpAttack": 95,
+        "SpDefense": 85,
+        "Speed": 105
+      },
+      "description": "Electabuzz is an Electric type Pokémon introduced in Generation 1. It is known as the Electric Pokémon.",
+      "image": "125.png"
+    },
+    {
+      "id": 126,
+      "nom": "Magmar",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 95,
+        "Defense": 57,
+        "SpAttack": 100,
+        "SpDefense": 85,
+        "Speed": 93
+      },
+      "description": "Magmar is a Fire type Pokémon introduced in Generation 1. It is known as the Spitfire Pokémon.",
+      "image": "126.png"
+    },
+    {
+      "id": 127,
+      "nom": "Scarabrute",
+      "types": [
+        {
+          "nom": "Insecte",
+          "couleur": "lime accent-4"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 125,
+        "Defense": 100,
+        "SpAttack": 55,
+        "SpDefense": 70,
+        "Speed": 85
+      },
+      "description": "Pinsir is a Bug type Pokémon introduced in Generation 1. It is known as the Stag Beetle Pokémon.",
+      "image": "127.png"
+    },
+    {
+      "id": 128,
+      "nom": "Tauros",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 75,
+        "Attack": 100,
+        "Defense": 95,
+        "SpAttack": 40,
+        "SpDefense": 70,
+        "Speed": 110
+      },
+      "description": "Tauros is a Normal type Pokémon introduced in Generation 1. It is known as the Wild Bull Pokémon.",
+      "image": "128.png"
+    },
+    {
+      "id": 129,
+      "nom": "Magicarpe",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 20,
+        "Attack": 10,
+        "Defense": 55,
+        "SpAttack": 15,
+        "SpDefense": 20,
+        "Speed": 80
+      },
+      "description": "Magikarp is a Water type Pokémon introduced in Generation 1. It is known as the Fish Pokémon.",
+      "image": "129.png"
+    },
+    {
+      "id": 130,
+      "nom": "Léviator",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 95,
+        "Attack": 125,
+        "Defense": 79,
+        "SpAttack": 60,
+        "SpDefense": 100,
+        "Speed": 81
+      },
+      "description": "Gyarados is a Water/Flying type Pokémon introduced in Generation 1. It is known as the Atrocious Pokémon.",
+      "image": "130.png"
+    },
+    {
+      "id": 131,
+      "nom": "Lokhlass",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        },
+        {
+          "nom": "Glace",
+          "couleur": "cyan lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 130,
+        "Attack": 85,
+        "Defense": 80,
+        "SpAttack": 85,
+        "SpDefense": 95,
+        "Speed": 60
+      },
+      "description": "Lapras is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Transport Pokémon.",
+      "image": "131.png"
+    },
+    {
+      "id": 132,
+      "nom": "Métamorph",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 48,
+        "Attack": 48,
+        "Defense": 48,
+        "SpAttack": 48,
+        "SpDefense": 48,
+        "Speed": 48
+      },
+      "description": "Ditto is a Normal type Pokémon introduced in Generation 1. It is known as the Transform Pokémon.",
+      "image": "132.png"
+    },
+    {
+      "id": 133,
+      "nom": "Évoli",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 55,
+        "Attack": 55,
+        "Defense": 50,
+        "SpAttack": 45,
+        "SpDefense": 65,
+        "Speed": 55
+      },
+      "description": "Eevee is a Normal type Pokémon introduced in Generation 1. It is known as the Evolution Pokémon.",
+      "image": "133.png"
+    },
+    {
+      "id": 134,
+      "nom": "Aquali",
+      "types": [
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 130,
+        "Attack": 65,
+        "Defense": 60,
+        "SpAttack": 110,
+        "SpDefense": 95,
+        "Speed": 65
+      },
+      "description": "Vaporeon is a Water type Pokémon introduced in Generation 1. It is known as the Bubble Jet Pokémon.",
+      "image": "134.png"
+    },
+    {
+      "id": 135,
+      "nom": "Voltali",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 65,
+        "Defense": 60,
+        "SpAttack": 110,
+        "SpDefense": 95,
+        "Speed": 130
+      },
+      "description": "Jolteon is an Electric type Pokémon introduced in Generation 1. It is known as the Lightning Pokémon.",
+      "image": "135.png"
+    },
+    {
+      "id": 136,
+      "nom": "Pyroli",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 130,
+        "Defense": 60,
+        "SpAttack": 95,
+        "SpDefense": 110,
+        "Speed": 65
+      },
+      "description": "Flareon is a Fire type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
+      "image": "136.png"
+    },
+    {
+      "id": 137,
+      "nom": "Porygon",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 65,
+        "Attack": 60,
+        "Defense": 70,
+        "SpAttack": 85,
+        "SpDefense": 75,
+        "Speed": 40
+      },
+      "description": "Porygon is a Normal type Pokémon introduced in Generation 1. It is known as the Virtual Pokémon.",
+      "image": "137.png"
+    },
+    {
+      "id": 138,
+      "nom": "Amonita",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 35,
+        "Attack": 40,
+        "Defense": 100,
+        "SpAttack": 90,
+        "SpDefense": 55,
+        "Speed": 35
+      },
+      "description": "Omanyte is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Spiral Pokémon.",
+      "image": "138.png"
+    },
+    {
+      "id": 139,
+      "nom": "Amonistar",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 70,
+        "Attack": 60,
+        "Defense": 125,
+        "SpAttack": 115,
+        "SpDefense": 70,
+        "Speed": 55
+      },
+      "description": "Omastar is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Spiral Pokémon.",
+      "image": "139.png"
+    },
+    {
+      "id": 140,
+      "nom": "Kabuto",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 30,
+        "Attack": 80,
+        "Defense": 90,
+        "SpAttack": 55,
+        "SpDefense": 45,
+        "Speed": 55
+      },
+      "description": "Kabuto is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
+      "image": "140.png"
+    },
+    {
+      "id": 141,
+      "nom": "Kabutops",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Eau",
+          "couleur": "blue lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 60,
+        "Attack": 115,
+        "Defense": 105,
+        "SpAttack": 65,
+        "SpDefense": 70,
+        "Speed": 80
+      },
+      "description": "Kabutops is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
+      "image": "141.png"
+    },
+    {
+      "id": 142,
+      "nom": "Ptéra",
+      "types": [
+        {
+          "nom": "Roche",
+          "couleur": "brown lighten-2"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 80,
+        "Attack": 105,
+        "Defense": 65,
+        "SpAttack": 60,
+        "SpDefense": 75,
+        "Speed": 130
+      },
+      "description": "Aerodactyl is a Rock/Flying type Pokémon introduced in Generation 1. It is known as the Fossil Pokémon.",
+      "image": "142.png"
+    },
+    {
+      "id": 143,
+      "nom": "Ronflex",
+      "types": [
+        {
+          "nom": "Normal",
+          "couleur": "grey lighten-1"
+        }
+      ],
+      "base": {
+        "HP": 160,
+        "Attack": 110,
+        "Defense": 65,
+        "SpAttack": 65,
+        "SpDefense": 110,
+        "Speed": 30
+      },
+      "description": "Snorlax is a Normal type Pokémon introduced in Generation 1. It is known as the Sleeping Pokémon.",
+      "image": "143.png"
+    },
+    {
+      "id": 144,
+      "nom": "Artikodin",
+      "types": [
+        {
+          "nom": "Glace",
+          "couleur": "cyan lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 85,
+        "Defense": 100,
+        "SpAttack": 95,
+        "SpDefense": 125,
+        "Speed": 85
+      },
+      "description": "Articuno is an Ice/Flying type Pokémon introduced in Generation 1. It is known as the Freeze Pokémon.",
+      "image": "144.png"
+    },
+    {
+      "id": 145,
+      "nom": "Électhor",
+      "types": [
+        {
+          "nom": "Electrique",
+          "couleur": "yellow lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 90,
+        "Defense": 85,
+        "SpAttack": 125,
+        "SpDefense": 90,
+        "Speed": 100
+      },
+      "description": "Zapdos is an Electric/Flying type Pokémon introduced in Generation 1. It is known as the Electric Pokémon.",
+      "image": "145.png"
+    },
+    {
+      "id": 146,
+      "nom": "Sulfura",
+      "types": [
+        {
+          "nom": "Feu",
+          "couleur": "deep-orange lighten-1"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 90,
+        "Attack": 100,
+        "Defense": 90,
+        "SpAttack": 125,
+        "SpDefense": 85,
+        "Speed": 90
+      },
+      "description": "Moltres is a Fire/Flying type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
+      "image": "146.png"
+    },
+    {
+      "id": 147,
+      "nom": "Minidraco",
+      "types": [
+        {
+          "nom": "Dragon",
+          "couleur": "deep-purple accent-3"
+        }
+      ],
+      "base": {
+        "HP": 41,
+        "Attack": 64,
+        "Defense": 45,
+        "SpAttack": 50,
+        "SpDefense": 50,
+        "Speed": 50
+      },
+      "description": "Dratini is a Dragon type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
+      "image": "147.png"
+    },
+    {
+      "id": 148,
+      "nom": "Draco",
+      "types": [
+        {
+          "nom": "Dragon",
+          "couleur": "deep-purple accent-3"
+        }
+      ],
+      "base": {
+        "HP": 61,
+        "Attack": 84,
+        "Defense": 65,
+        "SpAttack": 70,
+        "SpDefense": 70,
+        "Speed": 70
+      },
+      "description": "Dragonair is a Dragon type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
+      "image": "148.png"
+    },
+    {
+      "id": 149,
+      "nom": "Dracolosse",
+      "types": [
+        {
+          "nom": "Dragon",
+          "couleur": "deep-purple accent-3"
+        },
+        {
+          "nom": "Vol",
+          "couleur": "light-blue lighten-3"
+        }
+      ],
+      "base": {
+        "HP": 91,
+        "Attack": 134,
+        "Defense": 95,
+        "SpAttack": 100,
+        "SpDefense": 100,
+        "Speed": 80
+      },
+      "description": "Dragonite is a Dragon/Flying type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
+      "image": "149.png"
+    },
+    {
+      "id": 150,
+      "nom": "Mewtwo",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 106,
+        "Attack": 110,
+        "Defense": 90,
+        "SpAttack": 154,
+        "SpDefense": 90,
+        "Speed": 130
+      },
+      "description": "Mewtwo is a Psychic type Pokémon introduced in Generation 1. It is known as the Genetic Pokémon.",
+      "image": "150.png"
+    },
+    {
+      "id": 151,
+      "nom": "Mew",
+      "types": [
+        {
+          "nom": "Psy",
+          "couleur": "pink accent-2"
+        }
+      ],
+      "base": {
+        "HP": 100,
+        "Attack": 100,
+        "Defense": 100,
+        "SpAttack": 100,
+        "SpDefense": 100,
+        "Speed": 100
+      },
+      "description": "Mew is a Psychic type Pokémon introduced in Generation 1. It is known as the New Species Pokémon.",
+      "image": "151.png"
+    }
+  ]}
