@@ -10,6 +10,10 @@ class Pokemon():
         self.pokedex = False
         self.hp_max = base['HP']
         self.hp = self.hp_max
+        self.lvl = 1
+    
+    def __str__(self):
+        return self.nom
 
     def take_dmg(self, amount):
         self.hp -= amount

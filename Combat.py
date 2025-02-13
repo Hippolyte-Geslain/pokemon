@@ -1,5 +1,6 @@
 import json
 import random
+from selectors import SelectorKey
 from pokemon_manager import PokemonManager
 
 class Combat:
@@ -16,7 +17,6 @@ class Combat:
         multiplier = 1.0
         for atk_type in attacker_types:
             for def_type in defender_types:
-                # Convert type names to lowercase for matching with type_chart
                 atk_name = atk_type['nom'].lower()
                 def_name = def_type['nom'].lower()
                 if atk_name in self.type_chart and def_name in self.type_chart[atk_name]:
@@ -27,7 +27,7 @@ class Combat:
         #Miss Factor
         accuracy = attacker.base.get('Speed',60)
         evasion = defender.base.get('Speed',60)
-        ecart = round((accuracy - evasion)/10)
+        ecart = (accuracy - evasion)/300
         base_accuracy = 0.9
         probability_hit = base_accuracy + ecart
         if random.random() < probability_hit:
@@ -55,38 +55,37 @@ class Combat:
 
     def execute_turn(self, attacker, defender):
         damage = self.calculate_damage(attacker, defender)
-        if damage.isnumeric():
+        print(f"{attacker} is attacking {defender}")
+        if isinstance(damage, int):
             defender.take_dmg(damage)
-            return {
-            'attacker': attacker.nom,
-            'defender': defender.nom,
-            'damage': damage,
-            'defender_hp': defender.hp
-        }
+            return f"{attacker.nom} dealt {damage} damage to {defender.nom}\n{defender.nom} has {defender.hp} HP remaining"
         else:
+            return damage
 
-        
-        
+    def game_loop(self):
+        while not self.pokemon_1.ko and not self.pokemon_2.ko:
+            print(self.execute_turn(self.pokemon_1, self.pokemon_2))
+            if self.pokemon_2.ko:
+                break
+            print(self.execute_turn(self.pokemon_2, self.pokemon_1))
+            if self.pokemon_1.ko:
+                break
+        if self.pokemon_1.ko:
+            print(f'{self.pokemon_1.nom} is KO, {self.pokemon_2.nom} won the fight!')
+        else:
+            print(f'{self.pokemon_2.nom} is KO, {self.pokemon_1.nom} won the fight!')
 
-# Example usage
 def game():
     
 
-    # Initialize
     pm = PokemonManager()
-    pikachu = pm.get_pokemon(25)  # Pikachu
-    staross = pm.get_pokemon(121)  # staross
+    pikachu = pm.get_pokemon(25)
+    staross = pm.get_pokemon(121)
     print()
-    # Create battle
+    # Create battle as random_battle = Combat(pokemon_1,pokemon_2)
     battle = Combat(pikachu, staross)
-    staross.is_in_pokedex()
+    #Execute the fight
+    battle.game_loop()
 
-    # Execute one turn
-    result = battle.execute_turn(pikachu, staross)
-    print(f"{result['attacker']} dealt {result['damage']} damage to {result['defender']}")
-    print(f"{result['defender']} has {result['defender_hp']} HP remaining")
-    result = battle.execute_turn(staross,pikachu)
-    print(f"{result['attacker']} dealt {result['damage']} damage to {result['defender']}")
-    print(f"{result['defender']} has {result['defender_hp']} HP remaining")
 
 game()
