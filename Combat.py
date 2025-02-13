@@ -1,5 +1,6 @@
 import json
-from random import randint
+import random
+from pokemon_manager import PokemonManager
 
 class Combat:
     def __init__(self, pokemon1, pokemon2):
@@ -23,41 +24,53 @@ class Combat:
         return multiplier
 
     def calculate_damage(self, attacker, defender, move_power=50):
-        # Random factor (87.5% to 100%)
-        random_factor = randint(217, 255) / 255
+        #Miss Factor
+        accuracy = attacker.base.get('Speed',60)
+        evasion = defender.base.get('Speed',60)
+        ecart = round((accuracy - evasion)/10)
+        base_accuracy = 0.9
+        probability_hit = base_accuracy + ecart
+        if random.random() < probability_hit:
+            # Random factor (87.5% to 100%)
+            random_factor = random.randint(217, 255) / 255
 
-        # Type effectiveness
-        type_multiplier = self.calculate_type_multiplier(
-            attacker.types,
-            defender.types
-        )
+            # Type effectiveness
+            type_multiplier = self.calculate_type_multiplier(
+                attacker.types,
+                defender.types
+            )
 
-        # Basic damage formula
-        # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
-        level = 50  # Assuming level 50 for this example
-        attack = attacker.base.get('Attack', 50)
-        defense = defender.base.get('Defense', 50)
+            # Basic damage formula
+            # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
+            level = 50  # Assuming level 50 for this example
+            attack = attacker.base.get('Attack', 50)
+            defense = defender.base.get('Defense', 50)
 
-        damage = ((2 * level + 10) / 250) * (attack/defense) * move_power + 2
-        damage *= random_factor * type_multiplier
+            damage = ((2 * level + 10) / 250) * (attack/defense) * move_power + 2
+            damage *= random_factor * type_multiplier
 
-        return int(damage)
+            return int(damage)
+        else:
+            return f'The attack missed'
 
     def execute_turn(self, attacker, defender):
-        """Execute one turn of combat"""
         damage = self.calculate_damage(attacker, defender)
-        defender.take_dmg(damage)
-        
-        return {
+        if damage.isnumeric():
+            defender.take_dmg(damage)
+            return {
             'attacker': attacker.nom,
             'defender': defender.nom,
             'damage': damage,
             'defender_hp': defender.hp
         }
+        else:
+
+        
+        
 
 # Example usage
-def battle_example():
-    from pokemon_manager import PokemonManager
+def game():
+    
 
     # Initialize
     pm = PokemonManager()
@@ -66,6 +79,7 @@ def battle_example():
     print()
     # Create battle
     battle = Combat(pikachu, staross)
+    staross.is_in_pokedex()
 
     # Execute one turn
     result = battle.execute_turn(pikachu, staross)
@@ -75,4 +89,4 @@ def battle_example():
     print(f"{result['attacker']} dealt {result['damage']} damage to {result['defender']}")
     print(f"{result['defender']} has {result['defender_hp']} HP remaining")
 
-battle_example()
+game()
