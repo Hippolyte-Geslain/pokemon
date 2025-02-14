@@ -9,16 +9,15 @@ class Combat:
         self.pokemon_1 = pokemon1
         self.pokemon_2 = pokemon2
         self._load_type_chart()
-        self.running = True
 
     def _load_type_chart(self):
         with open('type_chart.json', 'r', encoding='utf-8') as f:
             self.type_chart = json.load(f)
 
     def calculate_type_multiplier(self, attacker_types, defender_types):
-        multiplier = 1.0
-        for atk_type in attacker_types:
-            for def_type in defender_types:
+        multiplier = 1.0 #default value
+        for atk_type in attacker_types: #go find the att type in the chart
+            for def_type in defender_types: #go find the def type in the def chart
                 atk_name = atk_type['nom'].lower()
                 def_name = def_type['nom'].lower()
                 if atk_name in self.type_chart and def_name in self.type_chart[atk_name]:
@@ -41,13 +40,11 @@ class Combat:
                 attacker.types,
                 defender.types
             )
-
-            # Basic damage formula
-            # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
-            level = 50  # Assuming level 50 for this example
+            level = 50  #default level
             attack = attacker.base.get('Attack', 50)
             defense = defender.base.get('Defense', 50)
 
+            # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
             damage = ((2 * level + 10) / 250) * (attack/defense) * move_power + 2
             damage *= random_factor * type_multiplier
 
@@ -58,7 +55,7 @@ class Combat:
     def execute_turn(self, attacker, defender):
         damage = self.calculate_damage(attacker, defender)
         print(f"{attacker} is attacking {defender}")
-        if isinstance(damage, int):
+        if isinstance(damage, int): #if the attack succeded, 'damage' is the damage, else it's 'the attack missed'
             defender.take_dmg(damage)
             return f"{attacker.nom} dealt {damage} damage to {defender.nom}\n{defender.nom} has {defender.hp} HP remaining"
         else:
@@ -80,29 +77,33 @@ class Combat:
 
         if self.pokemon_1.ko:
             print(f'{self.pokemon_1.nom} is KO, {self.pokemon_2.nom} won the fight!')
+            return self.pokemon_2.nom
         else:
             print(f'{self.pokemon_2.nom} is KO, {self.pokemon_1.nom} won the fight!')
+            return self.pokemon_1.nom
 
-def game():
+def game(): #setting all the elements to monitor the game
     running = True
     pm = PokemonManager()
-    pikachu = pm.get_pokemon(25)
+    pikachu = pm.get_pokemon(25) #we pick Pikachu to play
+    history = []
     pokemons_fought = []
     pokemon_to_fight = random.randint(1,151)
     next_opponent = pm.get_pokemon(pokemon_to_fight)
-    pokemons_fought.append(pokemon_to_fight)
+    pokemons_fought.append(pokemon_to_fight) #we note which pokemon we fight
     print()
     # Create battle as random_battle = Combat(pokemon_1,pokemon_2)
     while running:
         battle = Combat(pikachu, next_opponent)
-        battle.game_loop()
+        history.append(battle.game_loop()) #the winner is added to the history
         pokemons_fought.append(pokemon_to_fight)
 
         while pokemon_to_fight in pokemons_fought:
-            pokemon_to_fight = random.randint(1,151)
+            pokemon_to_fight = random.randint(1,151) #we find a random pokemon we didn't fought already
         next_opponent = pm.get_pokemon(pokemon_to_fight)
         pikachu.hp = pikachu.hp_max
-        pikachu.ko = False
-        time.sleep(2)
+        pikachu.ko = False #we reset pikachu after the fight
+        pygame.time.delay(2000)
+        print(history)
 
 game()
