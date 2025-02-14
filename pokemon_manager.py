@@ -33,12 +33,3 @@ class PokemonManager:
             pokemon for pokemon in self.pokemons.values()
             if any(t['nom'] == type_name for t in pokemon.types)
         ]
-pm = PokemonManager()
-test = pm.get_pokemon(1)
-# Test code
-if __name__ == "__main__":
-    pygame.init()
-    pm = PokemonManager()
-    pokemon = pm.get_pokemon(1)
-    if pokemon:
-        print(f"Loaded image size: {pokemon.image.get_size()}")

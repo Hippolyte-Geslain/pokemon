@@ -1,9 +1,7 @@
 import json
 import random
-from selectors import SelectorKey
 from pokemon_manager import PokemonManager
 import pygame
-import time
 class Combat:
     def __init__(self, pokemon1, pokemon2):
         self.pokemon_1 = pokemon1
@@ -85,19 +83,21 @@ class Combat:
 def game(): #setting all the elements to monitor the game
     running = True
     pm = PokemonManager()
+    choosed_pokemon=input('Which Pokemon do you want to choose?')
     pikachu = pm.get_pokemon(25) #we pick Pikachu to play
     history = []
     pokemons_fought = []
     pokemon_to_fight = random.randint(1,151)
     next_opponent = pm.get_pokemon(pokemon_to_fight)
     pokemons_fought.append(pokemon_to_fight) #we note which pokemon we fight
+    pokemon_to_fight.is_in_pokedex()
     print()
     # Create battle as random_battle = Combat(pokemon_1,pokemon_2)
     while running:
         battle = Combat(pikachu, next_opponent)
         history.append(battle.game_loop()) #the winner is added to the history
         pokemons_fought.append(pokemon_to_fight)
-
+        pokemon_to_fight.is_in_pokedex()
         while pokemon_to_fight in pokemons_fought:
             pokemon_to_fight = random.randint(1,151) #we find a random pokemon we didn't fought already
         next_opponent = pm.get_pokemon(pokemon_to_fight)
