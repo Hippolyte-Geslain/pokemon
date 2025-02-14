@@ -1,6 +1,6 @@
 import json
 from Pokemon import Pokemon
-
+import pygame
 class PokemonManager:
     def __init__(self):
         self.pokemons = {}  # Dictionary with ID as key and Pokemon instance as value
@@ -11,13 +11,14 @@ class PokemonManager:
             data = json.load(file)
             
         for pokemon_data in data['pokemons']:
+            image_path = f"images/{pokemon_data['image']}"
             pokemon = Pokemon(
                 id=pokemon_data['id'],
                 nom=pokemon_data['nom'],
                 types=pokemon_data['types'],
                 base=pokemon_data['base'],
                 description=pokemon_data['description'],
-                image=pokemon_data['image']
+                image=pygame.image.load(image_path)
             )
             self.pokemons[pokemon.id] = pokemon
     
@@ -32,3 +33,12 @@ class PokemonManager:
             pokemon for pokemon in self.pokemons.values()
             if any(t['nom'] == type_name for t in pokemon.types)
         ]
+pm = PokemonManager()
+test = pm.get_pokemon(1)
+# Test code
+if __name__ == "__main__":
+    pygame.init()
+    pm = PokemonManager()
+    pokemon = pm.get_pokemon(1)
+    if pokemon:
+        print(f"Loaded image size: {pokemon.image.get_size()}")

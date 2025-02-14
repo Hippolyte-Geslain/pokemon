@@ -2,12 +2,14 @@ import json
 import random
 from selectors import SelectorKey
 from pokemon_manager import PokemonManager
-
+import pygame
+import time
 class Combat:
     def __init__(self, pokemon1, pokemon2):
         self.pokemon_1 = pokemon1
         self.pokemon_2 = pokemon2
         self._load_type_chart()
+        self.running = True
 
     def _load_type_chart(self):
         with open('type_chart.json', 'r', encoding='utf-8') as f:
@@ -63,29 +65,44 @@ class Combat:
             return damage
 
     def game_loop(self):
+        print(f"\n{self.pokemon_1.nom} is fighting {self.pokemon_2.nom}\n")
         while not self.pokemon_1.ko and not self.pokemon_2.ko:
             print(self.execute_turn(self.pokemon_1, self.pokemon_2))
             if self.pokemon_2.ko:
                 break
+
+            pygame.time.delay(2500)
             print(self.execute_turn(self.pokemon_2, self.pokemon_1))
             if self.pokemon_1.ko:
                 break
+
+            pygame.time.delay(2500)
+
         if self.pokemon_1.ko:
             print(f'{self.pokemon_1.nom} is KO, {self.pokemon_2.nom} won the fight!')
         else:
             print(f'{self.pokemon_2.nom} is KO, {self.pokemon_1.nom} won the fight!')
 
 def game():
-    
-
+    running = True
     pm = PokemonManager()
     pikachu = pm.get_pokemon(25)
-    staross = pm.get_pokemon(121)
+    pokemons_fought = []
+    pokemon_to_fight = random.randint(1,151)
+    next_opponent = pm.get_pokemon(pokemon_to_fight)
+    pokemons_fought.append(pokemon_to_fight)
     print()
     # Create battle as random_battle = Combat(pokemon_1,pokemon_2)
-    battle = Combat(pikachu, staross)
-    #Execute the fight
-    battle.game_loop()
+    while running:
+        battle = Combat(pikachu, next_opponent)
+        battle.game_loop()
+        pokemons_fought.append(pokemon_to_fight)
 
+        while pokemon_to_fight in pokemons_fought:
+            pokemon_to_fight = random.randint(1,151)
+        next_opponent = pm.get_pokemon(pokemon_to_fight)
+        pikachu.hp = pikachu.hp_max
+        pikachu.ko = False
+        time.sleep(2)
 
 game()
