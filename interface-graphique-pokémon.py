@@ -15,12 +15,12 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pokémon Menu")
 
 # Charger l'image de fond
-fond = pygame.image.load("/home/kerrymaureemootoo/dossier_IA/Projet_Pokemon/pokemon_fond.jpg")
+fond = pygame.image.load("images/pokemon_fond.jpg")
 fond = pygame.transform.scale(fond, (WIDTH, HEIGHT))
 
 # Charger et jouer la musique de fond
 pygame.mixer.init()
-pygame.mixer.music.load("/mnt/chromeos/MyFiles/Downloads/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")  # Remplace par ton fichier audio
+pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")  # Remplace par ton fichier audio
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
 
