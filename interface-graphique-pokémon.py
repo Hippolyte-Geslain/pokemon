@@ -30,7 +30,7 @@ font = pygame.font.Font(None, 50)
 
 # Définition des boutons (x, y, largeur, hauteur)
 buttons = {
-   
+
     "Continue": pygame.Rect(350, 220, 200, 50),
     
     "New ": pygame.Rect(350, 320, 200, 50),
@@ -63,7 +63,7 @@ while running:
         label = font.render(text, True, WHITE)
         screen.blit(label, (rect.x + 50, rect.y + 10))
 
-    pygame.display.flip()  # Mise à jour de l'atfichag
+    pygame.display.flip()  # Mise à jour de l'affichage
     
     
 

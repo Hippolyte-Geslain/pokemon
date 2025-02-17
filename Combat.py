@@ -83,27 +83,32 @@ class Combat:
 def game(): #setting all the elements to monitor the game
     running = True
     pm = PokemonManager()
-    choosed_pokemon=input('Which Pokemon do you want to choose?')
-    pikachu = pm.get_pokemon(25) #we pick Pikachu to play
+    your_pokemon = pm.get_pokemon(1)
+    """
+    choosed_pokemon=int(input('Which Pokemon do you want to choose?'))
+    your_pokemon = pm.get_pokemon(choosed_pokemon) #we pick your_pokemon to play
+    """
     history = []
     pokemons_fought = []
     pokemon_to_fight = random.randint(1,151)
     next_opponent = pm.get_pokemon(pokemon_to_fight)
     pokemons_fought.append(pokemon_to_fight) #we note which pokemon we fight
-    pokemon_to_fight.is_in_pokedex()
+    next_opponent.is_in_pokedex()
+    print(f'You chose {your_pokemon.nom}')
     print()
     # Create battle as random_battle = Combat(pokemon_1,pokemon_2)
     while running:
-        battle = Combat(pikachu, next_opponent)
+        battle = Combat(your_pokemon, next_opponent)
         history.append(battle.game_loop()) #the winner is added to the history
         pokemons_fought.append(pokemon_to_fight)
-        pokemon_to_fight.is_in_pokedex()
+        next_opponent.is_in_pokedex()
         while pokemon_to_fight in pokemons_fought:
             pokemon_to_fight = random.randint(1,151) #we find a random pokemon we didn't fought already
         next_opponent = pm.get_pokemon(pokemon_to_fight)
-        pikachu.hp = pikachu.hp_max
-        pikachu.ko = False #we reset pikachu after the fight
+        your_pokemon.hp = your_pokemon.hp_max
+        your_pokemon.ko = False #we reset your_pokemon after the fight
         pygame.time.delay(2000)
         print(history)
 
-game()
+if __name__ == '__main__':
+    game()

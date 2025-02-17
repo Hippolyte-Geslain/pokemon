@@ -33,3 +33,5 @@ class PokemonManager:
             pokemon for pokemon in self.pokemons.values()
             if any(t['nom'] == type_name for t in pokemon.types)
         ]
+    def get_pokemon_image(self,pokemon_id):
+        return self.get_pokemon(pokemon_id).image
