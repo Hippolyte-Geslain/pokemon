@@ -35,3 +35,18 @@ class PokemonManager:
         ]
     def get_pokemon_image(self,pokemon_id):
         return self.get_pokemon(pokemon_id).image
+
+    def display_pokemon(self, screen, pokemon, position):
+        """Display a pokemon at the given position on screen"""
+        if pokemon and hasattr(pokemon, 'image'):
+            try:
+                # Scale image if needed (optional)
+                scaled_image = pygame.transform.scale(pokemon.image, (150, 150))  # Adjust size as needed
+                screen.blit(scaled_image, position)
+                
+            except pygame.error as e:
+                print(f"Error displaying Pokemon {pokemon.nom}: {e}")
+                # Create a fallback surface if image fails to display
+                fallback = pygame.Surface((150, 150))
+                fallback.fill((100, 100, 100))  # Gray color
+                screen.blit(fallback, position)

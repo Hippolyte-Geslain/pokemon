@@ -32,4 +32,3 @@ while running:
     screen.blit(pokemon1,(0,0))
 
     pygame.display.flip()  # Mise à jour de l'affichage
-
