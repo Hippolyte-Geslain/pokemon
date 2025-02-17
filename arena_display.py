@@ -10,11 +10,13 @@ RED = (220, 20, 60)
 
 WIDTH, HEIGHT = 900, 800
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+fond = pygame.image.load("images/pokemon_fond.jpg")
+fond = pygame.transform.scale(fond, (WIDTH, HEIGHT))
 pygame.display.set_caption("Pokémon Fight")
 pm = PokemonManager()
 
 arena = BLACK
-pokemon1 = pm.get_pokemon_image(12)
+pokemon1 = pm.get_pokemon_image(2)
 font = pygame.font.Font(None, 50)
 
 running = True
@@ -24,11 +26,10 @@ while running:
             running = False
 
     # **Afficher l'image de fond**
-    screen.blit(arena, (0, 0))
-    screen.blit(pokemon1,(0,0))
+    screen.blit(fond,(0,0))
 
     # Dessiner les pokemonns
-    pygame.draw
+    screen.blit(pokemon1,(0,0))
 
     pygame.display.flip()  # Mise à jour de l'affichage
 
