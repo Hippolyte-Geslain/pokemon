@@ -1,6 +1,7 @@
 import pygame
 from Combat import Combat
 from pokemon_manager import PokemonManager
+from player_manager import PlayerManager
 import random
 
 class PokemonGame:
@@ -27,12 +28,15 @@ class PokemonGame:
         self.load_assets()
 
         # Initialize game state
-        self.state = "MENU"  # States: MENU, BATTLE, POKEDEX, END
+        self.state = "PLAYER_SELECT"  # States: MENU, BATTLE, POKEDEX, PLAYER_SELECT, END
         self.pm = PokemonManager()
+        self.player_manager = PlayerManager()
+        self.current_player = None
         self.your_pokemon = None
         self.opponent_pokemon = None
         self.battle = None
         self.end_message = ""
+        self.new_player_name = ""
 
     def load_assets(self):
         # Background
@@ -58,7 +62,8 @@ class PokemonGame:
             "Continue": pygame.Rect(350, 220, 200, 50),
             "New Game": pygame.Rect(350, 320, 200, 50),
             "Pokédex": pygame.Rect(350, 420, 200, 50),
-            "Quit": pygame.Rect(350, 520, 200, 50),
+            "Player Select": pygame.Rect(350, 520, 200, 50),
+            "Quit": pygame.Rect(350, 620, 200, 50),
         }
 
         for text, rect in buttons.items():
@@ -68,18 +73,60 @@ class PokemonGame:
 
         return buttons
 
+    def draw_player_select(self):
+        self.screen.fill(self.CREAM)
+        title = self.font.render("Select Player", True, self.BLACK)
+        self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
+
+        y_offset = 150
+        buttons = {}
+        for player_name in self.player_manager.get_all_players():
+            button = pygame.Rect(300, y_offset, 300, 50)
+            pygame.draw.rect(self.screen, self.BLUE, button, border_radius=10)
+            label = self.font.render(player_name, True, self.WHITE)
+            self.screen.blit(label, (button.x + 50, button.y + 10))
+            buttons[player_name] = button
+            y_offset += 100
+
+        # Draw a button to create a new player
+        new_player_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 200, 200, 50)
+        pygame.draw.rect(self.screen, self.BLUE, new_player_button, border_radius=10)
+        label = self.font.render("New Player", True, self.WHITE)
+        self.screen.blit(label, (new_player_button.x + 20, new_player_button.y + 10))
+
+        # Draw the text input field for the new player name
+        input_box = pygame.Rect(self.WIDTH // 2 - 150, self.HEIGHT - 300, 300, 50)
+        pygame.draw.rect(self.screen, self.WHITE, input_box, border_radius=10)
+        pygame.draw.rect(self.screen, self.BLACK, input_box, 2, border_radius=10)
+        name_label = self.font.render(self.new_player_name, True, self.BLACK)
+        self.screen.blit(name_label, (input_box.x + 10, input_box.y + 10))
+
+        # Draw a button to return to the menu
+        menu_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 100, 200, 50)
+        pygame.draw.rect(self.screen, self.BLUE, menu_button, border_radius=10)
+        label = self.font.render("Menu", True, self.WHITE)
+        self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
+
+        return buttons, new_player_button, menu_button, input_box
+
     def draw_pokedex(self):
         self.screen.fill(self.CREAM)
         title = self.font.render("Pokédex", True, self.BLACK)
         self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
 
         y_offset = 150
+        buttons = {}
         for pokemon_id in self.pm.pokedex:
             pokemon = self.pm.get_pokemon(pokemon_id)
             if pokemon:
                 self.pm.display_pokemon(self.screen, pokemon, (100, y_offset))
                 name = self.font.render(pokemon.nom, True, self.BLACK)
                 self.screen.blit(name, (300, y_offset + 50))
+                button = pygame.Rect(600, y_offset + 50, 200, 50)
+                pygame.draw.rect(self.screen, self.BLUE, button, border_radius=10)
+                label = self.font.render("Choose", True, self.WHITE)
+                self.screen.blit(label, (button.x + 50, button.y + 10))
+                buttons[pokemon_id] = button
                 y_offset += 200
 
         # Draw a button to return to the menu
@@ -88,7 +135,7 @@ class PokemonGame:
         label = self.font.render("Menu", True, self.WHITE)
         self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
 
-        return menu_button
+        return buttons, menu_button
 
     def draw_battle(self):
         self.screen.blit(self.battle_bg, (0, 0))
@@ -154,7 +201,6 @@ class PokemonGame:
 
     def start_battle(self):
         print("Starting battle...")
-        self.your_pokemon = self.pm.get_pokemon(1)  # For testing, use Bulbasaur
         self.opponent_pokemon = self.pm.get_pokemon(random.randint(1, 151))
         self.battle = Combat(self.your_pokemon, self.opponent_pokemon)
         self.state = "BATTLE"
@@ -203,9 +249,17 @@ class PokemonGame:
                                 if text == "Quit":
                                     running = False
                                 elif text == "New Game":
-                                    self.start_battle()
+                                    if self.current_player:
+                                        self.start_battle()
+                                    else:
+                                        print("No player selected!")
                                 elif text == "Pokédex":
-                                    self.state = "POKEDEX"
+                                    if self.current_player:
+                                        self.state = "POKEDEX"
+                                    else:
+                                        print("No player selected!")
+                                elif text == "Player Select":
+                                    self.state = "PLAYER_SELECT"
 
                     elif self.state == "BATTLE":
                         attack_button = self.draw_battle()
@@ -218,9 +272,33 @@ class PokemonGame:
                             self.state = "MENU"
 
                     elif self.state == "POKEDEX":
-                        menu_button = self.draw_pokedex()
+                        buttons, menu_button = self.draw_pokedex()
+                        for pokemon_id, button in buttons.items():
+                            if button.collidepoint(event.pos):
+                                self.your_pokemon = self.pm.get_pokemon(pokemon_id)
+                                self.state = "MENU"
                         if menu_button.collidepoint(event.pos):
                             self.state = "MENU"
+
+                    elif self.state == "PLAYER_SELECT":
+                        buttons, new_player_button, menu_button, input_box = self.draw_player_select()
+                        for player_name, button in buttons.items():
+                            if button.collidepoint(event.pos):
+                                self.current_player = player_name
+                                self.state = "MENU"
+                        if new_player_button.collidepoint(event.pos):
+                            if self.new_player_name:
+                                self.player_manager.create_player(self.new_player_name)
+                                self.new_player_name = ""
+                        if menu_button.collidepoint(event.pos):
+                            self.state = "MENU"
+
+                if event.type == pygame.KEYDOWN:
+                    if self.state == "PLAYER_SELECT":
+                        if event.key == pygame.K_BACKSPACE:
+                            self.new_player_name = self.new_player_name[:-1]
+                        else:
+                            self.new_player_name += event.unicode
 
             # Draw current state
             if self.state == "MENU":
@@ -231,6 +309,8 @@ class PokemonGame:
                 self.draw_end_screen(self.end_message)
             elif self.state == "POKEDEX":
                 self.draw_pokedex()
+            elif self.state == "PLAYER_SELECT":
+                self.draw_player_select()
 
             pygame.display.flip()
             clock.tick(60)

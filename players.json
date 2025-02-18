@@ -1,0 +1,10 @@
+{
+    "hippo": {
+        "fought_pokemon": [],
+        "current_pokemon": null
+    },
+    "salut": {
+        "fought_pokemon": [],
+        "current_pokemon": null
+    }
+}
