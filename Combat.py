@@ -48,7 +48,7 @@ class Combat:
 
             return int(damage)
         else:
-            return f'The attack missed'
+            return int(0)
 
     def execute_turn(self, attacker, defender):
         damage = self.calculate_damage(attacker, defender)

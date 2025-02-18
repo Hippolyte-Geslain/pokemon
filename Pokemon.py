@@ -31,5 +31,5 @@ class Pokemon():
     def is_ko(self):
         self.ko = True
 
-    def is_in_pokedex(self):
+    def mark_as_seen(self):
         self.pokedex = True
