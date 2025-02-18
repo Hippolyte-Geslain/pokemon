@@ -1,5 +1,4 @@
 import pygame
-
 # Initialisation de Pygame
 pygame.init()
 
@@ -27,18 +26,31 @@ pygame.mixer.music.play(-1)
 # Police de texte
 font = pygame.font.Font(None, 50)
 
-
 # Définition des boutons (x, y, largeur, hauteur)
 buttons = {
-
     "Continue": pygame.Rect(350, 220, 200, 50),
-    
-    "New ": pygame.Rect(350, 320, 200, 50),
-    
+    "New": pygame.Rect(350, 320, 200, 50),
     "Pokédex": pygame.Rect(350, 420, 200, 50),
-    
     "Quit": pygame.Rect(350, 520, 200, 50),
 }
+
+# État du jeu (pour changer d'écran)
+current_screen = "menu"
+
+def draw_menu():
+    """Affiche le menu principal."""
+    screen.blit(fond, (0, 0))
+    for text, rect in buttons.items():
+        pygame.draw.rect(screen, BLUE, rect, border_radius=10)
+        label = font.render(text, True, WHITE)
+        screen.blit(label, (rect.x + 50, rect.y + 10))
+
+def draw_new_screen(title):
+    """Affiche un nouvel écran avec un titre spécifique."""
+    screen.fill(WHITE)
+    label = font.render(title, True, BLACK)
+    screen.blit(label, (WIDTH // 2 - label.get_width() // 2, HEIGHT // 2 - label.get_height() // 2))
+    pygame.display.flip()
 
 running = True
 while running:
@@ -48,24 +60,18 @@ while running:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             for text, rect in buttons.items():
-                if rect.collidepoint(event.pos):
+                if rect.collidepoint(event.pos): 
                     if text == "Quit":
                         running = False
                     else:
-                        print(f"{text} button clicked!")
+                        current_screen = text  # Change d'écran
 
-    # **Afficher l'image de fond**
-    screen.blit(fond, (0, 0))
+    # Affichage selon l'écran actuel
+    if current_screen == "menu":
+        draw_menu()
+    else:
+        draw_new_screen(f"{current_screen} Screen")
 
-    # Dessiner les boutons
-    for text, rect in buttons.items():
-        pygame.draw.rect(screen, BLUE, rect, border_radius=10)
-        label = font.render(text, True, WHITE)
-        screen.blit(label, (rect.x + 50, rect.y + 10))
-
-    pygame.display.flip()  # Mise à jour de l'affichage
-    
-    
-
+    pygame.display.flip()
 
 pygame.quit()
