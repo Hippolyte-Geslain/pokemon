@@ -14,7 +14,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pokémon Menu")
 
 # Charger l'image de fond
-fond = pygame.image.load("images/pokemon_fond.jpg")
+fond = pygame.image.load("images/pokemon_fond.jpg")  
 fond = pygame.transform.scale(fond, (WIDTH, HEIGHT))
 
 # Charger et jouer la musique de fond
