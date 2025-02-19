@@ -1,4 +1,5 @@
 import pygame
+
 # Initialisation de Pygame
 pygame.init()
 
@@ -19,7 +20,7 @@ fond = pygame.transform.scale(fond, (WIDTH, HEIGHT))
 
 # Charger et jouer la musique de fond
 pygame.mixer.init()
-pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")  # Remplace par ton fichier audio
+pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1)
 
@@ -34,6 +35,9 @@ buttons = {
     "Quit": pygame.Rect(350, 520, 200, 50),
 }
 
+# Bouton retour (croix en haut à gauche)
+back_button = pygame.Rect(20, 20, 40, 40)
+
 # État du jeu (pour changer d'écran)
 current_screen = "menu"
 
@@ -46,12 +50,19 @@ def draw_menu():
         screen.blit(label, (rect.x + 50, rect.y + 10))
 
 def draw_new_screen(title):
-    """Affiche un nouvel écran avec un titre spécifique."""
+    """Affiche un nouvel écran avec un titre spécifique et un bouton retour."""
     screen.fill(WHITE)
     label = font.render(title, True, BLACK)
     screen.blit(label, (WIDTH // 2 - label.get_width() // 2, HEIGHT // 2 - label.get_height() // 2))
-    pygame.display.flip()
+    draw_back_button()
 
+def draw_back_button():
+    """Dessine une croix en haut à gauche pour revenir au menu."""
+    pygame.draw.rect(screen, RED, back_button, border_radius=5)
+    pygame.draw.line(screen, WHITE, (back_button.x + 10, back_button.y + 10), (back_button.x + 30, back_button.y + 30), 5)
+    pygame.draw.line(screen, WHITE, (back_button.x + 30, back_button.y + 10), (back_button.x + 10, back_button.y + 30), 5)
+
+target_screen = "menu"
 running = True
 while running:
     # Gestion des événements
@@ -59,13 +70,20 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            for text, rect in buttons.items():
-                if rect.collidepoint(event.pos): 
-                    if text == "Quit":
-                        running = False
-                    else:
-                        current_screen = text  # Change d'écran
-
+            if current_screen == "menu":
+                for text, rect in buttons.items():
+                    if rect.collidepoint(event.pos):
+                        if text == "Quit":
+                            running = False
+                        else:
+                            target_screen = text  # Change d'écran
+            else:
+                if back_button.collidepoint(event.pos):
+                    target_screen = "menu"  # Retour au menu principal
+    
+    # Mise à jour de l'écran actuel
+    current_screen = target_screen
+    
     # Affichage selon l'écran actuel
     if current_screen == "menu":
         draw_menu()
