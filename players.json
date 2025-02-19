@@ -29,5 +29,29 @@
             48
         ],
         "current_pokemon": null
+    },
+    "salu": {
+        "fought_pokemon": [
+            1,
+            4,
+            7
+        ],
+        "current_pokemon": null
+    },
+    "sal": {
+        "fought_pokemon": [
+            1,
+            4,
+            7
+        ],
+        "current_pokemon": null
+    },
+    "ayo": {
+        "fought_pokemon": [
+            1,
+            4,
+            7
+        ],
+        "current_pokemon": null
     }
 }

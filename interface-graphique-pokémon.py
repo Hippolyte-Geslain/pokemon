@@ -38,7 +38,9 @@ class PokemonGame:
         self.battle = None
         self.end_message = ""
         self.new_player_name = ""
+        self.error_message = ""
         self.scroll_offset = 0
+        self.new_pokemon_id = ""
 
     def load_assets(self):
         # Background
@@ -73,7 +75,9 @@ class PokemonGame:
             "Play": pygame.Rect(300, 220, 300, 70),
             "Pokédex": pygame.Rect(300, 320, 300, 70),
             "Player Select": pygame.Rect(300, 420, 300, 70),
-            "Quit": pygame.Rect(300, 520, 300, 70),
+            "Add Pokémon": pygame.Rect(300, 520, 300, 70),
+            "Delete Save": pygame.Rect(300, 620, 300, 70),
+            "Quit": pygame.Rect(300, 720, 300, 70),
         }
 
         for text, rect in buttons.items():
@@ -82,13 +86,37 @@ class PokemonGame:
             self.screen.blit(label, (rect.x + 50, rect.y + 10))
 
         return buttons
+    
+    def draw_add_pokemon(self):
+        self.screen.fill(self.CREAM)
+        title = self.font.render("Add Pokémon", True, self.BLACK)
+        self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
+
+        input_box = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT // 2 - 25, 200, 50)
+        pygame.draw.rect(self.screen, self.WHITE, input_box, border_radius=10)
+        pygame.draw.rect(self.screen, self.BLACK, input_box, 2, border_radius=10)
+        id_label = self.font.render(self.new_pokemon_id, True, self.BLACK)
+        self.screen.blit(id_label, (input_box.x + 10, input_box.y + 10))
+
+        # Error message
+        if self.error_message:
+            error_label = self.font.render(self.error_message, True, self.RED)
+            self.screen.blit(error_label, (self.WIDTH // 2 - error_label.get_width() // 2, input_box.y + 60))
+
+        # Draw a button to return to the menu
+        menu_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 100, 200, 50)
+        pygame.draw.rect(self.screen, self.BLUE, menu_button, border_radius=10)
+        label = self.font.render("Menu", True, self.WHITE)
+        self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
+
+        return input_box, menu_button
 
     def draw_player_select(self):
         self.screen.fill(self.CREAM)
         title = self.font.render("Select Player", True, self.BLACK)
         self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
 
-        y_offset = 150
+        y_offset = 150 + self.scroll_offset
         buttons = {}
         players = self.player_manager.load_players()
         for player_name in players:
@@ -105,6 +133,42 @@ class PokemonGame:
         label = self.font.render("New Player", True, self.WHITE)
         self.screen.blit(label, (new_player_button.x + 50, new_player_button.y + 10))
         buttons["New Player"] = new_player_button
+
+        input_box = pygame.Rect(350, y_offset + 100, 200, 50)
+        pygame.draw.rect(self.screen, self.WHITE, input_box, border_radius=10)
+        pygame.draw.rect(self.screen, self.BLACK, input_box, 2, border_radius=10)
+        name_label = self.font.render(self.new_player_name, True, self.BLACK)
+        self.screen.blit(name_label, (input_box.x + 10, input_box.y + 10))
+
+        # Error message
+        if self.error_message:
+            error_label = self.font.render(self.error_message, True, self.RED)
+            self.screen.blit(error_label, (self.WIDTH // 2 - error_label.get_width() // 2, y_offset + 160))
+
+        return buttons, input_box
+
+    def draw_delete_save(self):
+        self.screen.fill(self.CREAM)
+        title = self.font.render("Delete Save", True, self.BLACK)
+        self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
+
+        y_offset = 150 + self.scroll_offset  # Apply scroll offset
+        buttons = {}
+        players = self.player_manager.load_players()
+        for player_name in players:
+            button = pygame.Rect(350, y_offset, 200, 50)
+            pygame.draw.rect(self.screen, self.RED, button, border_radius=10)
+            label = self.font.render(player_name, True, self.WHITE)
+            self.screen.blit(label, (button.x + 50, button.y + 10))
+            buttons[player_name] = button
+            y_offset += 100
+
+        # Draw a button to return to the menu
+        menu_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 100, 200, 50)
+        pygame.draw.rect(self.screen, self.BLUE, menu_button, border_radius=10)
+        label = self.font.render("Menu", True, self.WHITE)
+        self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
+        buttons["Menu"] = menu_button
 
         return buttons
 
@@ -263,6 +327,10 @@ class PokemonGame:
                                     self.state = "POKEDEX"
                                 elif text =='Player Select':
                                     self.state = 'PLAYER_SELECT'
+                                elif text == "Delete Save":
+                                    self.state = "DELETE_SAVE"
+                                elif text == "Add Pokémon":
+                                    self.state = "ADD_POKEMON"
 
                     elif self.state == "BATTLE":
                         attack_button = self.draw_battle()
@@ -286,19 +354,69 @@ class PokemonGame:
                                     self.start_battle()
 
                     elif self.state == "PLAYER_SELECT":
-                        buttons = self.draw_player_select()
+                        self.new_player_name =""
+                        buttons, input_box = self.draw_player_select()
                         for player_name, rect in buttons.items():
                             if rect.collidepoint(event.pos):
                                 if player_name == "New Player":
-                                    self.new_player_name = input("Enter new player name: ")
-                                    self.player_manager.create_player(self.new_player_name)
-                                    self.current_player = self.new_player_name
+                                    self.new_player_name = ""
+                                    self.error_message = ""
                                 else:
                                     self.current_player = player_name
+                                    self.state = "MENU"
+                        if input_box.collidepoint(event.pos):
+                            self.new_player_name = ""
+                            self.error_message = ""
+                    
+                    elif self.state == "DELETE_SAVE":
+                        buttons = self.draw_delete_save()
+                        for player_name, rect in buttons.items():
+                            if rect.collidepoint(event.pos):
+                                if player_name == "Menu":
+                                    self.state = "MENU"
+                                else:
+                                    self.player_manager.delete_player(player_name)
+                    
+                    elif self.state == "ADD_POKEMON":
+                        input_box, menu_button = self.draw_add_pokemon()
+                        if menu_button.collidepoint(event.pos):
+                            self.state = "MENU"
+
+                if event.type == pygame.KEYDOWN:
+                    if self.state == "PLAYER_SELECT":
+                        if event.key == pygame.K_RETURN:
+                            if " " in self.new_player_name or not self.new_player_name:
+                                self.error_message = "Invalid username. No spaces allowed."
+                            elif self.new_player_name in self.player_manager.load_players():
+                                self.error_message = "Username already taken."
+                            else:
+                                self.player_manager.create_player(self.new_player_name)
+                                self.current_player = self.new_player_name
                                 self.state = "MENU"
+                        elif event.key == pygame.K_BACKSPACE:
+                            self.new_player_name = self.new_player_name[:-1]
+                        else:
+                            self.new_player_name += event.unicode
+
+                    elif self.state == "ADD_POKEMON":
+                        if event.key == pygame.K_RETURN:
+                            try:
+                                pokemon_id = int(self.new_pokemon_id)
+                                if self.pm.get_pokemon(pokemon_id):
+                                    self.player_manager.add_fought_pokemon(self.current_player, pokemon_id)
+                                    self.error_message = ""
+                                    self.state = "MENU"
+                                else:
+                                    self.error_message = "Invalid Pokémon ID."
+                            except ValueError:
+                                self.error_message = "Invalid Pokémon ID."
+                        elif event.key == pygame.K_BACKSPACE:
+                            self.new_pokemon_id = self.new_pokemon_id[:-1]
+                        else:
+                            self.new_pokemon_id += event.unicode
 
                 if event.type == pygame.MOUSEWHEEL:
-                    if self.state == "POKEDEX":
+                    if self.state == "POKEDEX" or self.state == "PLAYER_SELECT" or self.state == "DELETE_SAVE":
                         self.scroll_offset += event.y * 20
 
             # Draw current state
@@ -312,6 +430,10 @@ class PokemonGame:
                 self.draw_pokedex()
             elif self.state == "PLAYER_SELECT":
                 self.draw_player_select()
+            elif self.state == "DELETE_SAVE":
+                self.draw_delete_save()
+            elif self.state == "ADD_POKEMON":
+                self.draw_add_pokemon()
 
             pygame.display.flip()
             clock.tick(60)
