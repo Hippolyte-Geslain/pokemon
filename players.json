@@ -1,10 +1,33 @@
 {
     "hippo": {
-        "fought_pokemon": [],
+        "fought_pokemon": [
+            1,
+            121,
+            44,
+            88,
+            128,
+            25,
+            117,
+            48,
+            113,
+            27,
+            136
+        ],
         "current_pokemon": null
     },
     "salut": {
-        "fought_pokemon": [],
+        "fought_pokemon": [
+            1,
+            64
+        ],
+        "current_pokemon": null
+    },
+    "gello": {
+        "fought_pokemon": [
+            1,
+            140,
+            48
+        ],
         "current_pokemon": null
     }
 }

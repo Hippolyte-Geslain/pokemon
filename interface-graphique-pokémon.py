@@ -32,38 +32,48 @@ class PokemonGame:
         self.pm = PokemonManager()
         self.player_manager = PlayerManager()
         self.current_player = None
+        self.selected_pokemon = None
         self.your_pokemon = None
         self.opponent_pokemon = None
         self.battle = None
         self.end_message = ""
         self.new_player_name = ""
+        self.scroll_offset = 0
 
     def load_assets(self):
         # Background
-        self.background = pygame.image.load("images/pokemon_fond.jpg")
-        self.background = pygame.transform.scale(self.background, (self.WIDTH, self.HEIGHT))
+        try:
+            self.background = pygame.image.load("images/pokemon_fond.jpg")
+            self.background = pygame.transform.scale(self.background, (self.WIDTH, self.HEIGHT))
+        except pygame.error as e:
+            print(f"Failed to load background image: {e}")
 
         # Battle background
-        self.battle_bg = pygame.image.load("images/battle_background.jpg")
-        self.battle_bg = pygame.transform.scale(self.battle_bg, (self.WIDTH, self.HEIGHT))
+        try:
+            self.battle_bg = pygame.image.load("images/battle_background.jpg")
+            self.battle_bg = pygame.transform.scale(self.battle_bg, (self.WIDTH, self.HEIGHT))
+        except pygame.error as e:
+            print(f"Failed to load battle background image: {e}")
 
         # Font
         self.font = pygame.font.Font(None, 50)
 
         # Music
-        pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")
-        pygame.mixer.music.set_volume(0.5)
-        pygame.mixer.music.play(-1)
+        try:
+            pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")
+            pygame.mixer.music.set_volume(0.5)
+            pygame.mixer.music.play(-1)
+        except pygame.error as e:
+            print(f"Failed to load or play music: {e}")
 
     def draw_menu(self):
         self.screen.blit(self.background, (0, 0))
 
         buttons = {
-            "Continue": pygame.Rect(350, 220, 200, 50),
-            "New Game": pygame.Rect(350, 320, 200, 50),
-            "Pokédex": pygame.Rect(350, 420, 200, 50),
-            "Player Select": pygame.Rect(350, 520, 200, 50),
-            "Quit": pygame.Rect(350, 620, 200, 50),
+            "Play": pygame.Rect(300, 220, 300, 70),
+            "Pokédex": pygame.Rect(300, 320, 300, 70),
+            "Player Select": pygame.Rect(300, 420, 300, 70),
+            "Quit": pygame.Rect(300, 520, 300, 70),
         }
 
         for text, rect in buttons.items():
@@ -80,62 +90,62 @@ class PokemonGame:
 
         y_offset = 150
         buttons = {}
-        for player_name in self.player_manager.get_all_players():
-            button = pygame.Rect(300, y_offset, 300, 50)
+        players = self.player_manager.load_players()
+        for player_name in players:
+            button = pygame.Rect(350, y_offset, 200, 50)
             pygame.draw.rect(self.screen, self.BLUE, button, border_radius=10)
             label = self.font.render(player_name, True, self.WHITE)
             self.screen.blit(label, (button.x + 50, button.y + 10))
             buttons[player_name] = button
             y_offset += 100
 
-        # Draw a button to create a new player
-        new_player_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 200, 200, 50)
+        # New player input
+        new_player_button = pygame.Rect(350, y_offset, 200, 50)
         pygame.draw.rect(self.screen, self.BLUE, new_player_button, border_radius=10)
         label = self.font.render("New Player", True, self.WHITE)
-        self.screen.blit(label, (new_player_button.x + 20, new_player_button.y + 10))
+        self.screen.blit(label, (new_player_button.x + 50, new_player_button.y + 10))
+        buttons["New Player"] = new_player_button
 
-        # Draw the text input field for the new player name
-        input_box = pygame.Rect(self.WIDTH // 2 - 150, self.HEIGHT - 300, 300, 50)
-        pygame.draw.rect(self.screen, self.WHITE, input_box, border_radius=10)
-        pygame.draw.rect(self.screen, self.BLACK, input_box, 2, border_radius=10)
-        name_label = self.font.render(self.new_player_name, True, self.BLACK)
-        self.screen.blit(name_label, (input_box.x + 10, input_box.y + 10))
-
-        # Draw a button to return to the menu
-        menu_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 100, 200, 50)
-        pygame.draw.rect(self.screen, self.BLUE, menu_button, border_radius=10)
-        label = self.font.render("Menu", True, self.WHITE)
-        self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
-
-        return buttons, new_player_button, menu_button, input_box
+        return buttons
 
     def draw_pokedex(self):
         self.screen.fill(self.CREAM)
         title = self.font.render("Pokédex", True, self.BLACK)
         self.screen.blit(title, (self.WIDTH // 2 - title.get_width() // 2, 50))
 
-        y_offset = 150
+        y_offset = 150 + self.scroll_offset  # Apply scroll offset
+        x_offset = 100
+        col_count = 0
+        row_height = 200
+        col_width = 200
         buttons = {}
-        for pokemon_id in self.pm.pokedex:
-            pokemon = self.pm.get_pokemon(pokemon_id)
-            if pokemon:
-                self.pm.display_pokemon(self.screen, pokemon, (100, y_offset))
-                name = self.font.render(pokemon.nom, True, self.BLACK)
-                self.screen.blit(name, (300, y_offset + 50))
-                button = pygame.Rect(600, y_offset + 50, 200, 50)
-                pygame.draw.rect(self.screen, self.BLUE, button, border_radius=10)
-                label = self.font.render("Choose", True, self.WHITE)
-                self.screen.blit(label, (button.x + 50, button.y + 10))
-                buttons[pokemon_id] = button
-                y_offset += 200
+
+        if self.current_player:
+            fought_pokemon = self.player_manager.get_player_data(self.current_player)['fought_pokemon']
+            for pokemon_id in fought_pokemon:
+                pokemon = self.pm.get_pokemon(pokemon_id)
+                if pokemon:
+                    button = pygame.Rect(x_offset, y_offset, 150, 150)
+                    self.pm.display_pokemon(self.screen, pokemon, (x_offset, y_offset))
+                    name = self.font.render(pokemon.nom, True, self.BLACK)
+                    self.screen.blit(name, (x_offset + 75 - name.get_width() // 2, y_offset + 150))
+                    buttons[pokemon_id] = button
+                    col_count += 1
+                    if col_count >= 4:  # Move to next row after 4 columns
+                        col_count = 0
+                        y_offset += row_height
+                        x_offset = 100
+                    else:
+                        x_offset += col_width
 
         # Draw a button to return to the menu
         menu_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT - 100, 200, 50)
         pygame.draw.rect(self.screen, self.BLUE, menu_button, border_radius=10)
         label = self.font.render("Menu", True, self.WHITE)
         self.screen.blit(label, (menu_button.x + 50, menu_button.y + 10))
+        buttons["Menu"] = menu_button
 
-        return buttons, menu_button
+        return buttons
 
     def draw_battle(self):
         self.screen.blit(self.battle_bg, (0, 0))
@@ -182,8 +192,9 @@ class PokemonGame:
         level = self.font.render(f"{pokemon.lvl}", True, self.BLACK)
         self.screen.blit(level, (x, y - 35))  # Above HP text
         # HP text
-        hp_text = self.font.render(f"{pokemon.hp}/{pokemon.hp_max}", True, self.BLACK)
-        self.screen.blit(hp_text, (position[0], position[1] - 30))
+        hp_text = self.font.render(f"{pokemon.hp} {pokemon.hp_max}", True, self.BLACK)
+        if not is_opponent:
+            self.screen.blit(hp_text, (position[0]-75, position[1]+57))
 
     def draw_end_screen(self, message):
         self.screen.fill(self.BLACK)
@@ -200,22 +211,23 @@ class PokemonGame:
         return menu_button
 
     def start_battle(self):
-        print("Starting battle...")
+        if self.selected_pokemon:
+            self.your_pokemon = self.pm.get_pokemon(self.selected_pokemon)
+        else:
+            self.your_pokemon = self.pm.get_pokemon(1)  # Default to Bulbasaur if none selected
         self.opponent_pokemon = self.pm.get_pokemon(random.randint(1, 151))
         self.battle = Combat(self.your_pokemon, self.opponent_pokemon)
         self.state = "BATTLE"
-        self.pm.mark_pokemon_as_seen(self.your_pokemon.id)
-        self.pm.mark_pokemon_as_seen(self.opponent_pokemon.id)
-    
+        if self.current_player:
+            self.player_manager.add_fought_pokemon(self.current_player, self.your_pokemon.id)
+            self.player_manager.add_fought_pokemon(self.current_player, self.opponent_pokemon.id)
+
     def execute_turn(self):
         # Player's turn
         damage = self.battle.calculate_damage(self.your_pokemon, self.opponent_pokemon)
         self.opponent_pokemon.take_dmg(damage)
-        print(f"{self.your_pokemon.nom} dealt {damage} damage to {self.opponent_pokemon.nom}")
-        print(f"{self.opponent_pokemon.nom} has {self.opponent_pokemon.hp} HP remaining")
 
         if self.opponent_pokemon.ko:
-            print(f"{self.opponent_pokemon.nom} is KO!")
             self.state = "END"
             self.end_message = "You Win!"
             return
@@ -224,11 +236,8 @@ class PokemonGame:
         pygame.time.delay(1000)  # Add delay for opponent's turn
         damage = self.battle.calculate_damage(self.opponent_pokemon, self.your_pokemon)
         self.your_pokemon.take_dmg(damage)
-        print(f"{self.opponent_pokemon.nom} dealt {damage} damage to {self.your_pokemon.nom}")
-        print(f"{self.your_pokemon.nom} has {self.your_pokemon.hp} HP remaining")
 
         if self.your_pokemon.ko:
-            print(f"{self.your_pokemon.nom} is KO!")
             self.state = "END"
             self.end_message = "Game Over"
 
@@ -248,18 +257,12 @@ class PokemonGame:
                             if rect.collidepoint(event.pos):
                                 if text == "Quit":
                                     running = False
-                                elif text == "New Game":
-                                    if self.current_player:
-                                        self.start_battle()
-                                    else:
-                                        print("No player selected!")
+                                elif text == "Play":
+                                    self.start_battle()
                                 elif text == "Pokédex":
-                                    if self.current_player:
-                                        self.state = "POKEDEX"
-                                    else:
-                                        print("No player selected!")
-                                elif text == "Player Select":
-                                    self.state = "PLAYER_SELECT"
+                                    self.state = "POKEDEX"
+                                elif text =='Player Select':
+                                    self.state = 'PLAYER_SELECT'
 
                     elif self.state == "BATTLE":
                         attack_button = self.draw_battle()
@@ -272,33 +275,31 @@ class PokemonGame:
                             self.state = "MENU"
 
                     elif self.state == "POKEDEX":
-                        buttons, menu_button = self.draw_pokedex()
-                        for pokemon_id, button in buttons.items():
-                            if button.collidepoint(event.pos):
-                                self.your_pokemon = self.pm.get_pokemon(pokemon_id)
-                                self.state = "MENU"
-                        if menu_button.collidepoint(event.pos):
-                            self.state = "MENU"
+                        self.scroll_offset = 0
+                        buttons = self.draw_pokedex()
+                        for pokemon_id, rect in buttons.items():
+                            if rect.collidepoint(event.pos):
+                                if pokemon_id == "Menu":
+                                    self.state = "MENU"
+                                else:
+                                    self.selected_pokemon = pokemon_id
+                                    self.start_battle()
 
                     elif self.state == "PLAYER_SELECT":
-                        buttons, new_player_button, menu_button, input_box = self.draw_player_select()
-                        for player_name, button in buttons.items():
-                            if button.collidepoint(event.pos):
-                                self.current_player = player_name
+                        buttons = self.draw_player_select()
+                        for player_name, rect in buttons.items():
+                            if rect.collidepoint(event.pos):
+                                if player_name == "New Player":
+                                    self.new_player_name = input("Enter new player name: ")
+                                    self.player_manager.create_player(self.new_player_name)
+                                    self.current_player = self.new_player_name
+                                else:
+                                    self.current_player = player_name
                                 self.state = "MENU"
-                        if new_player_button.collidepoint(event.pos):
-                            if self.new_player_name:
-                                self.player_manager.create_player(self.new_player_name)
-                                self.new_player_name = ""
-                        if menu_button.collidepoint(event.pos):
-                            self.state = "MENU"
 
-                if event.type == pygame.KEYDOWN:
-                    if self.state == "PLAYER_SELECT":
-                        if event.key == pygame.K_BACKSPACE:
-                            self.new_player_name = self.new_player_name[:-1]
-                        else:
-                            self.new_player_name += event.unicode
+                if event.type == pygame.MOUSEWHEEL:
+                    if self.state == "POKEDEX":
+                        self.scroll_offset += event.y * 20
 
             # Draw current state
             if self.state == "MENU":

@@ -20,7 +20,7 @@ class PlayerManager:
         if player_name in self.players:
             raise ValueError("Player already exists")
         self.players[player_name] = {
-            'fought_pokemon': [],
+            'fought_pokemon': [1,4,7],
             'current_pokemon': None
         }
         self.save_players()

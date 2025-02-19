@@ -5,9 +5,7 @@ from Pokemon import Pokemon
 class PokemonManager:
     def __init__(self):
         self.pokemons = {}  # Dictionary with ID as key and Pokemon instance as value
-        self.pokedex = {}  # Dictionary to store Pokédex data
         self._load_pokemons()
-        self._load_pokedex()
     
     def _load_pokemons(self):
         with open('pokemon_stats.json', 'r', encoding='utf-8') as file:
@@ -31,17 +29,6 @@ class PokemonManager:
             )
             self.pokemons[pokemon.id] = pokemon
     
-    def _load_pokedex(self):
-        try:
-            with open('pokedex.json', 'r', encoding='utf-8') as file:
-                self.pokedex = json.load(file)
-        except FileNotFoundError:
-            self.pokedex = {}
-
-    def save_pokedex(self):
-        with open('pokedex.json', 'w', encoding='utf-8') as file:
-            json.dump(self.pokedex, file, indent=4)
-
     def get_pokemon(self, pokemon_id):
         return self.pokemons.get(pokemon_id)
     
@@ -70,8 +57,3 @@ class PokemonManager:
                 fallback = pygame.Surface((150, 150))
                 fallback.fill((100, 100, 100))  # Gray color
                 screen.blit(fallback, position)
-
-    def mark_pokemon_as_seen(self, pokemon_id):
-        if pokemon_id not in self.pokedex:
-            self.pokedex[pokemon_id] = True
-            self.save_pokedex()
