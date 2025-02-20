@@ -43,7 +43,7 @@ class Combat:
             defense = defender.base.get('Defense', 50)
 
             # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
-            damage = ((2 * level + 10) / 250) * (attack/defense) * move_power + 2
+            damage = ((2 * level + 20) / 250) * (attack/defense) * move_power + 2
             damage *= random_factor * type_multiplier
 
             return int(damage)

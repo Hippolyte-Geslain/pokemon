@@ -256,7 +256,7 @@ class PokemonGame:
         level = self.font.render(f"{pokemon.lvl}", True, self.BLACK)
         self.screen.blit(level, (x, y - 35))  # Above HP text
         # HP text
-        hp_text = self.font.render(f"{pokemon.hp} {pokemon.hp_max}", True, self.BLACK)
+        hp_text = self.font.render(f"{round(pokemon.hp)} {round(pokemon.hp_max)}", True, self.BLACK)
         if not is_opponent:
             self.screen.blit(hp_text, (position[0]-70, position[1]+57))
 
@@ -277,11 +277,20 @@ class PokemonGame:
     def start_battle(self):
         if self.selected_pokemon:
             self.your_pokemon = self.pm.get_pokemon(self.selected_pokemon)
+            self.your_pokemon.pm = self.pm
+            self.your_pokemon.heal_hp(999)
         else:
-            self.your_pokemon = self.pm.get_pokemon(1)  # Default to Bulbasaur if none selected
-        self.your_pokemon.heal_hp(999)
+            self.your_pokemon = self.pm.get_pokemon(1)
+            self.your_pokemon.pm = self.pm
+            self.your_pokemon.heal_hp(999)  # Default to Bulbasaur if none selected
+        self.your_pokemon.ko=False
+        self.your_pokemon.xp_to_lvl()
+        self.your_pokemon.hp = self.your_pokemon.hp_max
         self.opponent_pokemon = self.pm.get_pokemon(random.randint(1, 151))
-        self.opponent_pokemon.lvl = self.your_pokemon.lvl+(random.randint(-2,2))
+        self.opponent_pokemon.lvl = self.your_pokemon.lvl+(random.randint(-3,0))
+        if self.opponent_pokemon.lvl<1:
+            self.opponent_pokemon.lvl=1
+        self.opponent_pokemon.hp =1
         self.battle = Combat(self.your_pokemon, self.opponent_pokemon)
         self.state = "BATTLE"
         if self.current_player:
@@ -294,12 +303,12 @@ class PokemonGame:
         self.opponent_pokemon.take_dmg(damage)
 
         if self.opponent_pokemon.ko:
-            self.state = "END"
-            self.end_message = "You Win!"
             self.your_pokemon.xp+=(50*self.opponent_pokemon.lvl)
             if self.your_pokemon.check_evolution():
                 pygame.display.flip()
-            
+            pygame.display.flip()
+            self.state = "END"
+            self.end_message = "You Win!"
 
         # Opponent's turn
         pygame.time.delay(1000)  # Add delay for opponent's turn
@@ -381,6 +390,7 @@ class PokemonGame:
                                     self.state = "MENU"
                                 else:
                                     self.player_manager.delete_player(player_name)
+                                    self.current_player = self.new_player_name
                     
                     elif self.state == "ADD_POKEMON":
                         input_box, menu_button = self.draw_add_pokemon()

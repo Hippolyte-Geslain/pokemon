@@ -25,7 +25,8 @@ class PokemonManager:
                 types=pokemon_data['types'],
                 base=pokemon_data['base'],
                 description=pokemon_data['description'],
-                image=pokemon_image
+                image=pokemon_image,
+                evolution=pokemon_data['evolution']
             )
             self.pokemons[pokemon.id] = pokemon
     
@@ -45,7 +46,6 @@ class PokemonManager:
         return self.get_pokemon(pokemon_id).image
 
     def display_pokemon(self, screen, pokemon, position):
-        """Display a pokemon at the given position on screen"""
         if pokemon and hasattr(pokemon, 'image'):
             try:
                 # Scale image if needed (optional)

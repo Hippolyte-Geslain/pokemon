@@ -1,9 +1,10 @@
 def some_function():
-    from pokemon_manager import PokemonManager  # Moved inside function
+    from pokemon_manager import PokemonManager
     manager = PokemonManager()
+    return manager
 
 class Pokemon():
-    def __init__(self, id, nom, types, base, description, image, evolution=None):
+    def __init__(self, id, nom, types, base, description, image, evolution=None,pm=None):
         self.id = id
         self.nom = nom
         self.types = types
@@ -15,8 +16,9 @@ class Pokemon():
         self.pokedex = False
         self.hp_max = base['HP']
         self.hp = self.hp_max
-        self.lvl = 5
-        self.xp = 0
+        self.lvl = 15
+        self.xp = 99
+        self.pm = pm
     
     def __str__(self):
         return self.nom
@@ -42,7 +44,18 @@ class Pokemon():
         while self.xp > 100:
             self.xp -= 100
             self.lvl += 1
-            self.check_evolution()  # Check for evolution on level up
+            self.level_up()
+            self.check_evolution() # Check for evolution on level up
+
+    def level_up(self):
+        self.hp_max+=self.hp_max/50
+        round(self.hp_max,0)
+        self.base['Attack']+=self.base['Attack']/50
+        self.base["Attack"]+=self.base["Attack"]/50
+        self.base["Defense"]+=self.base["Defense"]/50
+        self.base["SpAttack"]+=self.base["SpAttack"]/50
+        self.base["SpDefense"]+=self.base["SpDefense"]/50
+        self.base["Speed"]+=self.base["Speed"]/50
 
     def check_evolution(self):
         if self.evolution and self.lvl >= self.evolution['niveau_requis']:
@@ -50,14 +63,13 @@ class Pokemon():
             return True
 
     def evolve(self):
-        # Assuming we have a function get_pokemon_by_id to fetch Pokémon data by ID
-        evolved_pokemon_data = some_function.get_pokemon(self.evolution['id'])
-        self.id = evolved_pokemon_data['id']
-        self.nom = evolved_pokemon_data['nom']
-        self.types = evolved_pokemon_data['types']
-        self.base = evolved_pokemon_data['base']
-        self.description = evolved_pokemon_data['description']
-        self.image = evolved_pokemon_data['image']
+        evolved_pokemon = self.pm.get_pokemon(self.evolution['id'])
+        self.id = evolved_pokemon.id
+        self.nom = evolved_pokemon.nom
+        self.types = evolved_pokemon.types
+        self.base = evolved_pokemon.base
+        self.description = evolved_pokemon.description
+        self.image = evolved_pokemon.image
         self.hp_max = self.base['HP']
         self.hp = self.hp_max
-        self.evolution = evolved_pokemon_data.get('evolution', None)
+        self.evolution = evolved_pokemon.evolution
