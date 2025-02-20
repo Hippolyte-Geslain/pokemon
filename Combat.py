@@ -38,17 +38,17 @@ class Combat:
                 attacker.types,
                 defender.types
             )
-            level = 50  #default level
+            level = attacker.lvl  #attacker level
             attack = attacker.base.get('Attack', 50)
             defense = defender.base.get('Defense', 50)
 
             # (2 * Level + 10) / 250 * Attack/Defense * Move Power + 2
-            damage = ((2 * level + 10) / 250) * (attack/defense) * move_power + 2
+            damage = ((2 * level + 20) / 250) * (attack/defense) * move_power + 2
             damage *= random_factor * type_multiplier
 
             return int(damage)
         else:
-            return f'The attack missed'
+            return int(0)
 
     def execute_turn(self, attacker, defender):
         damage = self.calculate_damage(attacker, defender)
@@ -84,10 +84,6 @@ def game(): #setting all the elements to monitor the game
     running = True
     pm = PokemonManager()
     your_pokemon = pm.get_pokemon(1)
-    """
-    choosed_pokemon=int(input('Which Pokemon do you want to choose?'))
-    your_pokemon = pm.get_pokemon(choosed_pokemon) #we pick your_pokemon to play
-    """
     history = []
     pokemons_fought = []
     pokemon_to_fight = random.randint(1,151)

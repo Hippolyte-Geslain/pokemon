@@ -1,6 +1,7 @@
 import json
-from Pokemon import Pokemon
 import pygame
+from Pokemon import Pokemon
+
 class PokemonManager:
     def __init__(self):
         self.pokemons = {}  # Dictionary with ID as key and Pokemon instance as value
@@ -12,13 +13,20 @@ class PokemonManager:
             
         for pokemon_data in data['pokemons']:
             image_path = f"images/{pokemon_data['image']}"
+            try:
+                pokemon_image = pygame.image.load(image_path).convert_alpha()
+            except pygame.error as e:
+                print(f"Failed to load image {image_path}: {e}")
+                pokemon_image = pygame.Surface((64, 64))  # Create a blank surface as fallback
+            
             pokemon = Pokemon(
                 id=pokemon_data['id'],
                 nom=pokemon_data['nom'],
                 types=pokemon_data['types'],
                 base=pokemon_data['base'],
                 description=pokemon_data['description'],
-                image=pygame.image.load(image_path)
+                image=pokemon_image,
+                evolution=pokemon_data['evolution']
             )
             self.pokemons[pokemon.id] = pokemon
     
@@ -33,5 +41,19 @@ class PokemonManager:
             pokemon for pokemon in self.pokemons.values()
             if any(t['nom'] == type_name for t in pokemon.types)
         ]
-    def get_pokemon_image(self,pokemon_id):
+    
+    def get_pokemon_image(self, pokemon_id):
         return self.get_pokemon(pokemon_id).image
+
+    def display_pokemon(self, screen, pokemon, position):
+        if pokemon and hasattr(pokemon, 'image'):
+            try:
+                # Scale image if needed (optional)
+                scaled_image = pygame.transform.scale(pokemon.image, (150, 150))  # Adjust size as needed
+                screen.blit(scaled_image, position)
+            except pygame.error as e:
+                print(f"Error displaying Pokemon {pokemon.nom}: {e}")
+                # Create a fallback surface if image fails to display
+                fallback = pygame.Surface((150, 150))
+                fallback.fill((100, 100, 100))  # Gray color
+                screen.blit(fallback, position)

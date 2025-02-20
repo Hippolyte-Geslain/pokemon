@@ -22,7 +22,11 @@
         "Speed": 45
       },
       "description": "Bulbasaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
-      "image": "001.png"
+      "image": "001.png",
+      "evolution": {
+        "id": 2,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 2,
@@ -46,7 +50,11 @@
         "Speed": 60
       },
       "description": "Ivysaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
-      "image": "002.png"
+      "image": "002.png",
+      "evolution": {
+        "id": 3,
+        "niveau_requis": 32
+      }
     },
     {
       "id": 3,
@@ -70,7 +78,8 @@
         "Speed": 80
       },
       "description": "Venusaur is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Seed Pokémon.",
-      "image": "003.png"
+      "image": "003.png",
+      "evolution": null
     },
     {
       "id": 4,
@@ -90,7 +99,11 @@
         "Speed": 65
       },
       "description": "Charmander is a Fire type Pokémon introduced in Generation 1. It is known as the Lizard Pokémon.",
-      "image": "004.png"
+      "image": "004.png",
+      "evolution": {
+        "id": 5,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 5,
@@ -110,7 +123,11 @@
         "Speed": 80
       },
       "description": "Charmeleon is a Fire type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
-      "image": "005.png"
+      "image": "005.png",
+      "evolution": {
+        "id": 6,
+        "niveau_requis": 36
+      }
     },
     {
       "id": 6,
@@ -134,7 +151,8 @@
         "Speed": 100
       },
       "description": "Charizard is a Fire/Flying type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
-      "image": "006.png"
+      "image": "006.png",
+      "evolution": null
     },
     {
       "id": 7,
@@ -154,7 +172,11 @@
         "Speed": 43
       },
       "description": "Squirtle is a Water type Pokémon introduced in Generation 1. It is known as the Tiny Turtle Pokémon.",
-      "image": "007.png"
+      "image": "007.png",
+      "evolution": {
+        "id": 8,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 8,
@@ -174,7 +196,11 @@
         "Speed": 58
       },
       "description": "Wartortle is a Water type Pokémon introduced in Generation 1. It is known as the Turtle Pokémon.",
-      "image": "008.png"
+      "image": "008.png",
+      "evolution": {
+        "id": 9,
+        "niveau_requis": 36
+      }
     },
     {
       "id": 9,
@@ -194,7 +220,8 @@
         "Speed": 78
       },
       "description": "Blastoise is a Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
-      "image": "009.png"
+      "image": "009.png",
+      "evolution": null
     },
     {
       "id": 10,
@@ -214,7 +241,11 @@
         "Speed": 45
       },
       "description": "Caterpie is a Bug type Pokémon introduced in Generation 1. It is known as the Worm Pokémon.",
-      "image": "010.png"
+      "image": "010.png",
+      "evolution": {
+        "id": 11,
+        "niveau_requis": 7
+      }
     },
     {
       "id": 11,
@@ -234,7 +265,11 @@
         "Speed": 30
       },
       "description": "Metapod is a Bug type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.",
-      "image": "011.png"
+      "image": "011.png",
+      "evolution": {
+        "id": 12,
+        "niveau_requis": 10
+      }
     },
     {
       "id": 12,
@@ -258,7 +293,8 @@
         "Speed": 70
       },
       "description": "Butterfree is a Bug/Flying type Pokémon introduced in Generation 1. It is known as the Butterfly Pokémon.",
-      "image": "012.png"
+      "image": "012.png",
+      "evolution": null
     },
     {
       "id": 13,
@@ -282,7 +318,11 @@
         "Speed": 50
       },
       "description": "Weedle is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Hairy Bug Pokémon.",
-      "image": "013.png"
+      "image": "013.png",
+      "evolution": {
+        "id": 14,
+        "niveau_requis": 7
+      }
     },
     {
       "id": 14,
@@ -306,7 +346,11 @@
         "Speed": 35
       },
       "description": "Kakuna is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Cocoon Pokémon.",
-      "image": "014.png"
+      "image": "014.png",
+      "evolution": {
+        "id": 15,
+        "niveau_requis": 10
+      }
     },
     {
       "id": 15,
@@ -330,7 +374,8 @@
         "Speed": 75
       },
       "description": "Beedrill is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Poison Bee Pokémon.",
-      "image": "015.png"
+      "image": "015.png",
+      "evolution": null
     },
     {
       "id": 16,
@@ -354,7 +399,11 @@
         "Speed": 56
       },
       "description": "Pidgey is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.",
-      "image": "016.png"
+      "image": "016.png",
+      "evolution": {
+        "id": 17,
+        "niveau_requis": 18
+      }
     },
     {
       "id": 17,
@@ -378,7 +427,11 @@
         "Speed": 71
       },
       "description": "Pidgeotto is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Bird Pokémon.",
-      "image": "017.png"
+      "image": "017.png",
+      "evolution": {
+        "id": 18,
+        "niveau_requis": 36
+      }
     },
     {
       "id": 18,
@@ -402,7 +455,8 @@
         "Speed": 101
       },
       "description": "Pidgeot is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Bird Pokémon.",
-      "image": "018.png"
+      "image": "018.png",
+      "evolution": null
     },
     {
       "id": 19,
@@ -422,7 +476,11 @@
         "Speed": 72
       },
       "description": "Rattata is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "019.png"
+      "image": "019.png",
+      "evolution": {
+        "id": 20,
+        "niveau_requis": 20
+      }
     },
     {
       "id": 20,
@@ -442,7 +500,8 @@
         "Speed": 97
       },
       "description": "Raticate is a Normal type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "020.png"
+      "image": "020.png",
+      "evolution": null
     },
     {
       "id": 21,
@@ -466,7 +525,11 @@
         "Speed": 70
       },
       "description": "Spearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Tiny Bird Pokémon.",
-      "image": "021.png"
+      "image": "021.png",
+      "evolution": {
+        "id": 22,
+        "niveau_requis": 20
+      }
     },
     {
       "id": 22,
@@ -490,7 +553,8 @@
         "Speed": 100
       },
       "description": "Fearow is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Beak Pokémon.",
-      "image": "022.png"
+      "image": "022.png",
+      "evolution": null
     },
     {
       "id": 23,
@@ -510,7 +574,11 @@
         "Speed": 55
       },
       "description": "Ekans is a Poison type Pokémon introduced in Generation 1. It is known as the Snake Pokémon.",
-      "image": "023.png"
+      "image": "023.png",
+      "evolution": {
+        "id": 24,
+        "niveau_requis": 22
+      }
     },
     {
       "id": 24,
@@ -530,7 +598,8 @@
         "Speed": 80
       },
       "description": "Arbok is a Poison type Pokémon introduced in Generation 1. It is known as the Cobra Pokémon.",
-      "image": "024.png"
+      "image": "024.png",
+      "evolution": null
     },
     {
       "id": 25,
@@ -550,7 +619,11 @@
         "Speed": 90
       },
       "description": "Pikachu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "025.png"
+      "image": "025.png",
+      "evolution": {
+        "id": 26,
+        "niveau_requis": "use Thunder Stone"
+      }
     },
     {
       "id": 26,
@@ -570,7 +643,8 @@
         "Speed": 110
       },
       "description": "Raichu is an Electric type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "026.png"
+      "image": "026.png",
+      "evolution": null
     },
     {
       "id": 27,
@@ -590,7 +664,11 @@
         "Speed": 40
       },
       "description": "Sandshrew is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "027.png"
+      "image": "027.png",
+      "evolution": {
+        "id": 28,
+        "niveau_requis": 22
+      }
     },
     {
       "id": 28,
@@ -610,7 +688,8 @@
         "Speed": 65
       },
       "description": "Sandslash is a Ground type Pokémon introduced in Generation 1. It is known as the Mouse Pokémon.",
-      "image": "028.png"
+      "image": "028.png",
+      "evolution": null
     },
     {
       "id": 29,
@@ -630,7 +709,11 @@
         "Speed": 41
       },
       "description": "Nidoran♀ is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
-      "image": "029.png"
+      "image": "029.png",
+      "evolution": {
+        "id": 30,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 30,
@@ -650,7 +733,11 @@
         "Speed": 56
       },
       "description": "Nidorina is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
-      "image": "030.png"
+      "image": "030.png",
+      "evolution": {
+        "id": 31,
+        "niveau_requis": "use Moon Stone"
+      }
     },
     {
       "id": 31,
@@ -674,7 +761,8 @@
         "Speed": 76
       },
       "description": "Nidoqueen is a Poison/Ground type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
-      "image": "031.png"
+      "image": "031.png",
+      "evolution": null
     },
     {
       "id": 32,
@@ -694,7 +782,11 @@
         "Speed": 50
       },
       "description": "Nidoran♂ is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
-      "image": "032.png"
+      "image": "032.png",
+      "evolution": {
+        "id": 33,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 33,
@@ -714,7 +806,11 @@
         "Speed": 65
       },
       "description": "Nidorino is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Pin Pokémon.",
-      "image": "033.png"
+      "image": "033.png",
+      "evolution": {
+        "id": 34,
+        "niveau_requis": "use Moon Stone"
+      }
     },
     {
       "id": 34,
@@ -738,7 +834,8 @@
         "Speed": 85
       },
       "description": "Nidoking is a Poison/Ground type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
-      "image": "034.png"
+      "image": "034.png",
+      "evolution": null
     },
     {
       "id": 35,
@@ -758,7 +855,11 @@
         "Speed": 35
       },
       "description": "Clefairy is a Fairy type Pokémon introduced in Generation 1. It is known as the Fairy Pokémon.",
-      "image": "035.png"
+      "image": "035.png",
+      "evolution": {
+        "id": 36,
+        "niveau_requis": "use Moon Stone"
+      }
     },
     {
       "id": 36,
@@ -778,7 +879,8 @@
         "Speed": 60
       },
       "description": "Clefable is a Fairy type Pokémon introduced in Generation 1. It is known as the Fairy Pokémon.",
-      "image": "036.png"
+      "image": "036.png",
+      "evolution": null
     },
     {
       "id": 37,
@@ -798,7 +900,11 @@
         "Speed": 65
       },
       "description": "Vulpix is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.",
-      "image": "037.png"
+      "image": "037.png",
+      "evolution": {
+        "id": 38,
+        "niveau_requis": "use Fire Stone"
+      }
     },
     {
       "id": 38,
@@ -818,7 +924,8 @@
         "Speed": 100
       },
       "description": "Ninetales is a Fire type Pokémon introduced in Generation 1. It is known as the Fox Pokémon.",
-      "image": "038.png"
+      "image": "038.png",
+      "evolution": null
     },
     {
       "id": 39,
@@ -842,7 +949,11 @@
         "Speed": 20
       },
       "description": "Jigglypuff is a Normal/Fairy type Pokémon introduced in Generation 1. It is known as the Balloon Pokémon.",
-      "image": "039.png"
+      "image": "039.png",
+      "evolution": {
+        "id": 40,
+        "niveau_requis": "use Moon Stone"
+      }
     },
     {
       "id": 40,
@@ -866,7 +977,8 @@
         "Speed": 45
       },
       "description": "Wigglytuff is a Normal/Fairy type Pokémon introduced in Generation 1. It is known as the Balloon Pokémon.",
-      "image": "040.png"
+      "image": "040.png",
+      "evolution": null
     },
     {
       "id": 41,
@@ -890,7 +1002,11 @@
         "Speed": 55
       },
       "description": "Zubat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.",
-      "image": "041.png"
+      "image": "041.png",
+      "evolution": {
+        "id": 42,
+        "niveau_requis": 22
+      }
     },
     {
       "id": 42,
@@ -914,7 +1030,11 @@
         "Speed": 90
       },
       "description": "Golbat is a Poison/Flying type Pokémon introduced in Generation 1. It is known as the Bat Pokémon.",
-      "image": "042.png"
+      "image": "042.png",
+      "evolution": {
+        "id": 169,
+        "niveau_requis": "high Friendship"
+      }
     },
     {
       "id": 43,
@@ -938,7 +1058,11 @@
         "Speed": 30
       },
       "description": "Oddish is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.",
-      "image": "043.png"
+      "image": "043.png",
+      "evolution": {
+        "id": 44,
+        "niveau_requis": 21
+      }
     },
     {
       "id": 44,
@@ -962,7 +1086,11 @@
         "Speed": 40
       },
       "description": "Gloom is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Weed Pokémon.",
-      "image": "044.png"
+      "image": "044.png",
+      "evolution": {
+        "id": 45,
+        "niveau_requis": "use Leaf Stone"
+      }
     },
     {
       "id": 45,
@@ -986,7 +1114,8 @@
         "Speed": 50
       },
       "description": "Vileplume is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.",
-      "image": "045.png"
+      "image": "045.png",
+      "evolution": null
     },
     {
       "id": 46,
@@ -1010,7 +1139,11 @@
         "Speed": 25
       },
       "description": "Paras is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.",
-      "image": "046.png"
+      "image": "046.png",
+      "evolution": {
+        "id": 47,
+        "niveau_requis": 24
+      }
     },
     {
       "id": 47,
@@ -1034,7 +1167,8 @@
         "Speed": 30
       },
       "description": "Parasect is a Bug/Grass type Pokémon introduced in Generation 1. It is known as the Mushroom Pokémon.",
-      "image": "047.png"
+      "image": "047.png",
+      "evolution": null
     },
     {
       "id": 48,
@@ -1058,7 +1192,11 @@
         "Speed": 45
       },
       "description": "Venonat is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Insect Pokémon.",
-      "image": "048.png"
+      "image": "048.png",
+      "evolution": {
+        "id": 49,
+        "niveau_requis": 31
+      }
     },
     {
       "id": 49,
@@ -1082,7 +1220,8 @@
         "Speed": 90
       },
       "description": "Venomoth is a Bug/Poison type Pokémon introduced in Generation 1. It is known as the Poison Moth Pokémon.",
-      "image": "049.png"
+      "image": "049.png",
+      "evolution": null
     },
     {
       "id": 50,
@@ -1102,7 +1241,11 @@
         "Speed": 95
       },
       "description": "Diglett is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
-      "image": "050.png"
+      "image": "050.png",
+      "evolution": {
+        "id": 51,
+        "niveau_requis": 26
+      }
     },
     {
       "id": 51,
@@ -1122,7 +1265,8 @@
         "Speed": 120
       },
       "description": "Dugtrio is a Ground type Pokémon introduced in Generation 1. It is known as the Mole Pokémon.",
-      "image": "051.png"
+      "image": "051.png",
+      "evolution": null
     },
     {
       "id": 52,
@@ -1142,7 +1286,11 @@
         "Speed": 90
       },
       "description": "Meowth is a Normal type Pokémon introduced in Generation 1. It is known as the Scratch Cat Pokémon.",
-      "image": "052.png"
+      "image": "052.png",
+      "evolution": {
+        "id": 53,
+        "niveau_requis": 28
+      }
     },
     {
       "id": 53,
@@ -1162,7 +1310,8 @@
         "Speed": 115
       },
       "description": "Persian is a Normal type Pokémon introduced in Generation 1. It is known as the Classy Cat Pokémon.",
-      "image": "053.png"
+      "image": "053.png",
+      "evolution": null
     },
     {
       "id": 54,
@@ -1182,7 +1331,11 @@
         "Speed": 55
       },
       "description": "Psyduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.",
-      "image": "054.png"
+      "image": "054.png",
+      "evolution": {
+        "id": 55,
+        "niveau_requis": 33
+      }
     },
     {
       "id": 55,
@@ -1202,7 +1355,8 @@
         "Speed": 85
       },
       "description": "Golduck is a Water type Pokémon introduced in Generation 1. It is known as the Duck Pokémon.",
-      "image": "055.png"
+      "image": "055.png",
+      "evolution": null
     },
     {
       "id": 56,
@@ -1222,7 +1376,11 @@
         "Speed": 70
       },
       "description": "Mankey is a Fighting type Pokémon introduced in Generation 1. It is known as the Pig Monkey Pokémon.",
-      "image": "056.png"
+      "image": "056.png",
+      "evolution": {
+        "id": 57,
+        "niveau_requis": 28
+      }
     },
     {
       "id": 57,
@@ -1242,7 +1400,8 @@
         "Speed": 95
       },
       "description": "Primeape is a Fighting type Pokémon introduced in Generation 1. It is known as the Pig Monkey Pokémon.",
-      "image": "057.png"
+      "image": "057.png",
+      "evolution": null
     },
     {
       "id": 58,
@@ -1262,7 +1421,11 @@
         "Speed": 60
       },
       "description": "Growlithe is a Fire type Pokémon introduced in Generation 1. It is known as the Puppy Pokémon.",
-      "image": "058.png"
+      "image": "058.png",
+      "evolution": {
+        "id": 59,
+        "niveau_requis": "use Fire Stone"
+      }
     },
     {
       "id": 59,
@@ -1282,7 +1445,8 @@
         "Speed": 95
       },
       "description": "Arcanine is a Fire type Pokémon introduced in Generation 1. It is known as the Legendary Pokémon.",
-      "image": "059.png"
+      "image": "059.png",
+      "evolution": null
     },
     {
       "id": 60,
@@ -1302,7 +1466,11 @@
         "Speed": 90
       },
       "description": "Poliwag is a Water type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
-      "image": "060.png"
+      "image": "060.png",
+      "evolution": {
+        "id": 61,
+        "niveau_requis": 25
+      }
     },
     {
       "id": 61,
@@ -1322,7 +1490,11 @@
         "Speed": 90
       },
       "description": "Poliwhirl is a Water type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
-      "image": "061.png"
+      "image": "061.png",
+      "evolution": {
+        "id": 62,
+        "niveau_requis": "use Water Stone"
+      }
     },
     {
       "id": 62,
@@ -1346,7 +1518,8 @@
         "Speed": 70
       },
       "description": "Poliwrath is a Water/Fighting type Pokémon introduced in Generation 1. It is known as the Tadpole Pokémon.",
-      "image": "062.png"
+      "image": "062.png",
+      "evolution": null
     },
     {
       "id": 63,
@@ -1366,7 +1539,11 @@
         "Speed": 90
       },
       "description": "Abra is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
-      "image": "063.png"
+      "image": "063.png",
+      "evolution": {
+        "id": 64,
+        "niveau_requis": 16
+      }
     },
     {
       "id": 64,
@@ -1386,7 +1563,11 @@
         "Speed": 105
       },
       "description": "Kadabra is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
-      "image": "064.png"
+      "image": "064.png",
+      "evolution": {
+        "id": 65,
+        "niveau_requis": "Trade"
+      }
     },
     {
       "id": 65,
@@ -1406,7 +1587,8 @@
         "Speed": 120
       },
       "description": "Alakazam is a Psychic type Pokémon introduced in Generation 1. It is known as the Psi Pokémon.",
-      "image": "065.png"
+      "image": "065.png",
+      "evolution": null
     },
     {
       "id": 66,
@@ -1426,7 +1608,11 @@
         "Speed": 35
       },
       "description": "Machop is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
-      "image": "066.png"
+      "image": "066.png",
+      "evolution": {
+        "id": 67,
+        "niveau_requis": 28
+      }
     },
     {
       "id": 67,
@@ -1446,7 +1632,11 @@
         "Speed": 45
       },
       "description": "Machoke is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
-      "image": "067.png"
+      "image": "067.png",
+      "evolution": {
+        "id": 68,
+        "niveau_requis": "Trade"
+      }
     },
     {
       "id": 68,
@@ -1466,7 +1656,8 @@
         "Speed": 55
       },
       "description": "Machamp is a Fighting type Pokémon introduced in Generation 1. It is known as the Superpower Pokémon.",
-      "image": "068.png"
+      "image": "068.png",
+      "evolution": null
     },
     {
       "id": 69,
@@ -1490,7 +1681,11 @@
         "Speed": 40
       },
       "description": "Bellsprout is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flower Pokémon.",
-      "image": "069.png"
+      "image": "069.png",
+      "evolution": {
+        "id": 70,
+        "niveau_requis": 21
+      }
     },
     {
       "id": 70,
@@ -1514,7 +1709,11 @@
         "Speed": 55
       },
       "description": "Weepinbell is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flycatcher Pokémon.",
-      "image": "070.png"
+      "image": "070.png",
+      "evolution": {
+        "id": 71,
+        "niveau_requis": "use Leaf Stone"
+      }
     },
     {
       "id": 71,
@@ -1538,7 +1737,8 @@
         "Speed": 70
       },
       "description": "Victreebel is a Grass/Poison type Pokémon introduced in Generation 1. It is known as the Flycatcher Pokémon.",
-      "image": "071.png"
+      "image": "071.png",
+      "evolution": null
     },
     {
       "id": 72,
@@ -1562,7 +1762,11 @@
         "Speed": 70
       },
       "description": "Tentacool is a Water/Poison type Pokémon introduced in Generation 1. It is known as the Jellyfish Pokémon.",
-      "image": "072.png"
+      "image": "072.png",
+      "evolution": {
+        "id": 73,
+        "niveau_requis": 30
+      }
     },
     {
       "id": 73,
@@ -1586,7 +1790,8 @@
         "Speed": 100
       },
       "description": "Tentacruel is a Water/Poison type Pokémon introduced in Generation 1. It is known as the Jellyfish Pokémon.",
-      "image": "073.png"
+      "image": "073.png",
+      "evolution": null
     },
     {
       "id": 74,
@@ -1610,7 +1815,11 @@
         "Speed": 20
       },
       "description": "Geodude is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
-      "image": "074.png"
+      "image": "074.png",
+      "evolution": {
+        "id": 75,
+        "niveau_requis": 25
+      }
     },
     {
       "id": 75,
@@ -1634,7 +1843,11 @@
         "Speed": 35
       },
       "description": "Graveler is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Pokémon.",
-      "image": "075.png"
+      "image": "075.png",
+      "evolution": {
+        "id": 76,
+        "niveau_requis": "Trade"
+      }
     },
     {
       "id": 76,
@@ -1658,7 +1871,8 @@
         "Speed": 45
       },
       "description": "Golem is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Megaton Pokémon.",
-      "image": "076.png"
+      "image": "076.png",
+      "evolution": null
     },
     {
       "id": 77,
@@ -1678,7 +1892,11 @@
         "Speed": 90
       },
       "description": "Ponyta is a Fire type Pokémon introduced in Generation 1. It is known as the Fire Horse Pokémon.",
-      "image": "077.png"
+      "image": "077.png",
+      "evolution": {
+        "id": 78,
+        "niveau_requis": 40
+      }
     },
     {
       "id": 78,
@@ -1698,7 +1916,8 @@
         "Speed": 105
       },
       "description": "Rapidash is a Fire type Pokémon introduced in Generation 1. It is known as the Fire Horse Pokémon.",
-      "image": "078.png"
+      "image": "078.png",
+      "evolution": null
     },
     {
       "id": 79,
@@ -1722,7 +1941,11 @@
         "Speed": 15
       },
       "description": "Slowpoke is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Dopey Pokémon.",
-      "image": "079.png"
+      "image": "079.png",
+      "evolution": {
+        "id": 80,
+        "niveau_requis": 37
+      }
     },
     {
       "id": 80,
@@ -1746,7 +1969,8 @@
         "Speed": 30
       },
       "description": "Slowbro is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Hermit Crab Pokémon.",
-      "image": "080.png"
+      "image": "080.png",
+      "evolution": null
     },
     {
       "id": 81,
@@ -1770,7 +1994,11 @@
         "Speed": 45
       },
       "description": "Magnemite is an Electric/Steel type Pokémon introduced in Generation 1. It is known as the Magnet Pokémon.",
-      "image": "081.png"
+      "image": "081.png",
+      "evolution": {
+        "id": 82,
+        "niveau_requis": 30
+      }
     },
     {
       "id": 82,
@@ -1794,7 +2022,11 @@
         "Speed": 70
       },
       "description": "Magneton is an Electric/Steel type Pokémon introduced in Generation 1. It is known as the Magnet Pokémon.",
-      "image": "082.png"
+      "image": "082.png",
+      "evolution": {
+        "id": 462,
+        "niveau_requis": "level up in a Magnetic Field area"
+      }
     },
     {
       "id": 83,
@@ -1818,7 +2050,8 @@
         "Speed": 60
       },
       "description": "Farfetch'd is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Wild Duck Pokémon.",
-      "image": "083.png"
+      "image": "083.png",
+      "evolution": null
     },
     {
       "id": 84,
@@ -1842,7 +2075,11 @@
         "Speed": 75
       },
       "description": "Doduo is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Twin Bird Pokémon.",
-      "image": "084.png"
+      "image": "084.png",
+      "evolution": {
+        "id": 85,
+        "niveau_requis": 31
+      }
     },
     {
       "id": 85,
@@ -1866,7 +2103,8 @@
         "Speed": 110
       },
       "description": "Dodrio is a Normal/Flying type Pokémon introduced in Generation 1. It is known as the Triple Bird Pokémon.",
-      "image": "085.png"
+      "image": "085.png",
+      "evolution": null
     },
     {
       "id": 86,
@@ -1886,7 +2124,11 @@
         "Speed": 45
       },
       "description": "Seel is a Water type Pokémon introduced in Generation 1. It is known as the Sea Lion Pokémon.",
-      "image": "086.png"
+      "image": "086.png",
+      "evolution": {
+        "id": 87,
+        "niveau_requis": 34
+      }
     },
     {
       "id": 87,
@@ -1910,7 +2152,8 @@
         "Speed": 70
       },
       "description": "Dewgong is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Sea Lion Pokémon.",
-      "image": "087.png"
+      "image": "087.png",
+      "evolution": null
     },
     {
       "id": 88,
@@ -1930,7 +2173,11 @@
         "Speed": 25
       },
       "description": "Grimer is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.",
-      "image": "088.png"
+      "image": "088.png",
+      "evolution": {
+        "id": 89,
+        "niveau_requis": 38
+      }
     },
     {
       "id": 89,
@@ -1950,7 +2197,8 @@
         "Speed": 50
       },
       "description": "Muk is a Poison type Pokémon introduced in Generation 1. It is known as the Sludge Pokémon.",
-      "image": "089.png"
+      "image": "089.png",
+      "evolution": null
     },
     {
       "id": 90,
@@ -1970,7 +2218,11 @@
         "Speed": 40
       },
       "description": "Shellder is a Water type Pokémon introduced in Generation 1. It is known as the Bivalve Pokémon.",
-      "image": "090.png"
+      "image": "090.png",
+      "evolution": {
+        "id": 91,
+        "niveau_requis": "use Water Stone"
+      }
     },
     {
       "id": 91,
@@ -1994,7 +2246,8 @@
         "Speed": 70
       },
       "description": "Cloyster is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Bivalve Pokémon.",
-      "image": "091.png"
+      "image": "091.png",
+      "evolution": null
     },
     {
       "id": 92,
@@ -2018,7 +2271,11 @@
         "Speed": 80
       },
       "description": "Gastly is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Gas Pokémon.",
-      "image": "092.png"
+      "image": "092.png",
+      "evolution": {
+        "id": 93,
+        "niveau_requis": 25
+      }
     },
     {
       "id": 93,
@@ -2042,7 +2299,11 @@
         "Speed": 95
       },
       "description": "Haunter is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Gas Pokémon.",
-      "image": "093.png"
+      "image": "093.png",
+      "evolution": {
+        "id": 94,
+        "niveau_requis": "Trade"
+      }
     },
     {
       "id": 94,
@@ -2066,7 +2327,8 @@
         "Speed": 110
       },
       "description": "Gengar is a Ghost/Poison type Pokémon introduced in Generation 1. It is known as the Shadow Pokémon.",
-      "image": "094.png"
+      "image": "094.png",
+      "evolution": null
     },
     {
       "id": 95,
@@ -2090,7 +2352,11 @@
         "Speed": 70
       },
       "description": "Onix is a Rock/Ground type Pokémon introduced in Generation 1. It is known as the Rock Snake Pokémon.",
-      "image": "095.png"
+      "image": "095.png",
+      "evolution": {
+        "id": 208,
+        "niveau_requis": "trade holding Metal Coat"
+      }
     },
     {
       "id": 96,
@@ -2110,7 +2376,11 @@
         "Speed": 42
       },
       "description": "Drowzee is a Psychic type Pokémon introduced in Generation 1. It is known as the Hypnosis Pokémon.",
-      "image": "096.png"
+      "image": "096.png",
+      "evolution": {
+        "id": 97,
+        "niveau_requis": 26
+      }
     },
     {
       "id": 97,
@@ -2130,7 +2400,8 @@
         "Speed": 67
       },
       "description": "Hypno is a Psychic type Pokémon introduced in Generation 1. It is known as the Hypnosis Pokémon.",
-      "image": "097.png"
+      "image": "097.png",
+      "evolution": null
     },
     {
       "id": 98,
@@ -2150,7 +2421,11 @@
         "Speed": 50
       },
       "description": "Krabby is a Water type Pokémon introduced in Generation 1. It is known as the River Crab Pokémon.",
-      "image": "098.png"
+      "image": "098.png",
+      "evolution": {
+        "id": 99,
+        "niveau_requis": 28
+      }
     },
     {
       "id": 99,
@@ -2170,7 +2445,8 @@
         "Speed": 75
       },
       "description": "Kingler is a Water type Pokémon introduced in Generation 1. It is known as the Pincer Pokémon.",
-      "image": "099.png"
+      "image": "099.png",
+      "evolution": null
     },
     {
       "id": 100,
@@ -2190,7 +2466,11 @@
         "Speed": 100
       },
       "description": "Voltorb is an Electric type Pokémon introduced in Generation 1. It is known as the Ball Pokémon.",
-      "image": "100.png"
+      "image": "100.png",
+      "evolution": {
+        "id": 101,
+        "niveau_requis": 30
+      }
     },
     {
       "id": 101,
@@ -2210,7 +2490,8 @@
         "Speed": 150
       },
       "description": "Electrode is an Electric type Pokémon introduced in Generation 1. It is known as the Ball Pokémon.",
-      "image": "101.png"
+      "image": "101.png",
+      "evolution": null
     },
     {
       "id": 102,
@@ -2234,7 +2515,11 @@
         "Speed": 40
       },
       "description": "Exeggcute is a Grass/Psychic type Pokémon introduced in Generation 1. It is known as the Egg Pokémon.",
-      "image": "102.png"
+      "image": "102.png",
+      "evolution": {
+        "id": 103,
+        "niveau_requis": "use Leaf Stone"
+      }
     },
     {
       "id": 103,
@@ -2258,7 +2543,8 @@
         "Speed": 55
       },
       "description": "Exeggutor is a Grass/Psychic type Pokémon introduced in Generation 1. It is known as the Coconut Pokémon.",
-      "image": "103.png"
+      "image": "103.png",
+      "evolution": null
     },
     {
       "id": 104,
@@ -2278,7 +2564,11 @@
         "Speed": 35
       },
       "description": "Cubone is a Ground type Pokémon introduced in Generation 1. It is known as the Lonely Pokémon.",
-      "image": "104.png"
+      "image": "104.png",
+      "evolution": {
+        "id": 105,
+        "niveau_requis": 28
+      }
     },
     {
       "id": 105,
@@ -2298,7 +2588,8 @@
         "Speed": 45
       },
       "description": "Marowak is a Ground type Pokémon introduced in Generation 1. It is known as the Bone Keeper Pokémon.",
-      "image": "105.png"
+      "image": "105.png",
+      "evolution": null
     },
     {
       "id": 106,
@@ -2318,7 +2609,8 @@
         "Speed": 87
       },
       "description": "Hitmonlee is a Fighting type Pokémon introduced in Generation 1. It is known as the Kicking Pokémon.",
-      "image": "106.png"
+      "image": "106.png",
+      "evolution": null
     },
     {
       "id": 107,
@@ -2338,7 +2630,8 @@
         "Speed": 76
       },
       "description": "Hitmonchan is a Fighting type Pokémon introduced in Generation 1. It is known as the Punching Pokémon.",
-      "image": "107.png"
+      "image": "107.png",
+      "evolution": null
     },
     {
       "id": 108,
@@ -2358,7 +2651,11 @@
         "Speed": 30
       },
       "description": "Lickitung is a Normal type Pokémon introduced in Generation 1. It is known as the Licking Pokémon.",
-      "image": "108.png"
+      "image": "108.png",
+      "evolution": {
+        "id": 463,
+        "niveau_requis": "after Rollout learned"
+      }
     },
     {
       "id": 109,
@@ -2378,7 +2675,11 @@
         "Speed": 35
       },
       "description": "Koffing is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Gas Pokémon.",
-      "image": "109.png"
+      "image": "109.png",
+      "evolution": {
+        "id": 110,
+        "niveau_requis": 35
+      }
     },
     {
       "id": 110,
@@ -2398,7 +2699,8 @@
         "Speed": 60
       },
       "description": "Weezing is a Poison type Pokémon introduced in Generation 1. It is known as the Poison Gas Pokémon.",
-      "image": "110.png"
+      "image": "110.png",
+      "evolution": null
     },
     {
       "id": 111,
@@ -2422,7 +2724,11 @@
         "Speed": 25
       },
       "description": "Rhyhorn is a Ground/Rock type Pokémon introduced in Generation 1. It is known as the Spikes Pokémon.",
-      "image": "111.png"
+      "image": "111.png",
+      "evolution": {
+        "id": 112,
+        "niveau_requis": 42
+      }
     },
     {
       "id": 112,
@@ -2446,7 +2752,11 @@
         "Speed": 40
       },
       "description": "Rhydon is a Ground/Rock type Pokémon introduced in Generation 1. It is known as the Drill Pokémon.",
-      "image": "112.png"
+      "image": "112.png",
+      "evolution": {
+        "id": 464,
+        "niveau_requis": "trade holding Protector"
+      }
     },
     {
       "id": 113,
@@ -2466,7 +2776,11 @@
         "Speed": 50
       },
       "description": "Chansey is a Normal type Pokémon introduced in Generation 1. It is known as the Egg Pokémon.",
-      "image": "113.png"
+      "image": "113.png",
+      "evolution": {
+        "id": 242,
+        "niveau_requis": "high Friendship"
+      }
     },
     {
       "id": 114,
@@ -2486,7 +2800,11 @@
         "Speed": 60
       },
       "description": "Tangela is a Grass type Pokémon introduced in Generation 1. It is known as the Vine Pokémon.",
-      "image": "114.png"
+      "image": "114.png",
+      "evolution": {
+        "id": 465,
+        "niveau_requis": "after Ancient Power learned"
+      }
     },
     {
       "id": 115,
@@ -2506,7 +2824,8 @@
         "Speed": 90
       },
       "description": "Kangaskhan is a Normal type Pokémon introduced in Generation 1. It is known as the Parent Pokémon.",
-      "image": "115.png"
+      "image": "115.png",
+      "evolution": null
     },
     {
       "id": 116,
@@ -2526,7 +2845,11 @@
         "Speed": 60
       },
       "description": "Horsea is a Water type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
-      "image": "116.png"
+      "image": "116.png",
+      "evolution": {
+        "id": 117,
+        "niveau_requis": 32
+      }
     },
     {
       "id": 117,
@@ -2546,7 +2869,11 @@
         "Speed": 85
       },
       "description": "Seadra is a Water type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
-      "image": "117.png"
+      "image": "117.png",
+      "evolution": {
+        "id": 230,
+        "niveau_requis": "trade holding Dragon Scale"
+      }
     },
     {
       "id": 118,
@@ -2566,7 +2893,11 @@
         "Speed": 63
       },
       "description": "Goldeen is a Water type Pokémon introduced in Generation 1. It is known as the Goldfish Pokémon.",
-      "image": "118.png"
+      "image": "118.png",
+      "evolution": {
+        "id": 119,
+        "niveau_requis": 33
+      }
     },
     {
       "id": 119,
@@ -2586,7 +2917,8 @@
         "Speed": 68
       },
       "description": "Seaking is a Water type Pokémon introduced in Generation 1. It is known as the Goldfish Pokémon.",
-      "image": "119.png"
+      "image": "119.png",
+      "evolution": null
     },
     {
       "id": 120,
@@ -2606,7 +2938,11 @@
         "Speed": 85
       },
       "description": "Staryu is a Water type Pokémon introduced in Generation 1. It is known as the Star Shape Pokémon.",
-      "image": "120.png"
+      "image": "120.png",
+      "evolution": {
+        "id": 121,
+        "niveau_requis": "use Water Stone"
+      }
     },
     {
       "id": 121,
@@ -2630,7 +2966,8 @@
         "Speed": 115
       },
       "description": "Starmie is a Water/Psychic type Pokémon introduced in Generation 1. It is known as the Mysterious Pokémon.",
-      "image": "121.png"
+      "image": "121.png",
+      "evolution": null
     },
     {
       "id": 122,
@@ -2654,7 +2991,8 @@
         "Speed": 90
       },
       "description": "Mr. Mime is a Psychic/Fairy type Pokémon introduced in Generation 1. It is known as the Barrier Pokémon.",
-      "image": "122.png"
+      "image": "122.png",
+      "evolution": null
     },
     {
       "id": 123,
@@ -2678,7 +3016,11 @@
         "Speed": 105
       },
       "description": "Scyther is a Bug/Flying type Pokémon introduced in Generation 1. It is known as the Mantis Pokémon.",
-      "image": "123.png"
+      "image": "123.png",
+      "evolution": {
+        "id": 212,
+        "niveau_requis": "trade holding Metal Coat"
+      }
     },
     {
       "id": 124,
@@ -2702,7 +3044,8 @@
         "Speed": 95
       },
       "description": "Jynx is an Ice/Psychic type Pokémon introduced in Generation 1. It is known as the Human Shape Pokémon.",
-      "image": "124.png"
+      "image": "124.png",
+      "evolution": null
     },
     {
       "id": 125,
@@ -2722,7 +3065,11 @@
         "Speed": 105
       },
       "description": "Electabuzz is an Electric type Pokémon introduced in Generation 1. It is known as the Electric Pokémon.",
-      "image": "125.png"
+      "image": "125.png",
+      "evolution": {
+        "id": 466,
+        "niveau_requis": "trade holding Electirizer"
+      }
     },
     {
       "id": 126,
@@ -2742,7 +3089,11 @@
         "Speed": 93
       },
       "description": "Magmar is a Fire type Pokémon introduced in Generation 1. It is known as the Spitfire Pokémon.",
-      "image": "126.png"
+      "image": "126.png",
+      "evolution": {
+        "id": 467,
+        "niveau_requis": "trade holding Magmarizer"
+      }
     },
     {
       "id": 127,
@@ -2762,7 +3113,8 @@
         "Speed": 85
       },
       "description": "Pinsir is a Bug type Pokémon introduced in Generation 1. It is known as the Stag Beetle Pokémon.",
-      "image": "127.png"
+      "image": "127.png",
+      "evolution": null
     },
     {
       "id": 128,
@@ -2782,7 +3134,8 @@
         "Speed": 110
       },
       "description": "Tauros is a Normal type Pokémon introduced in Generation 1. It is known as the Wild Bull Pokémon.",
-      "image": "128.png"
+      "image": "128.png",
+      "evolution": null
     },
     {
       "id": 129,
@@ -2802,7 +3155,11 @@
         "Speed": 80
       },
       "description": "Magikarp is a Water type Pokémon introduced in Generation 1. It is known as the Fish Pokémon.",
-      "image": "129.png"
+      "image": "129.png",
+      "evolution": {
+        "id": 130,
+        "niveau_requis": 20
+      }
     },
     {
       "id": 130,
@@ -2826,7 +3183,8 @@
         "Speed": 81
       },
       "description": "Gyarados is a Water/Flying type Pokémon introduced in Generation 1. It is known as the Atrocious Pokémon.",
-      "image": "130.png"
+      "image": "130.png",
+      "evolution": null
     },
     {
       "id": 131,
@@ -2850,7 +3208,8 @@
         "Speed": 60
       },
       "description": "Lapras is a Water/Ice type Pokémon introduced in Generation 1. It is known as the Transport Pokémon.",
-      "image": "131.png"
+      "image": "131.png",
+      "evolution": null
     },
     {
       "id": 132,
@@ -2870,7 +3229,8 @@
         "Speed": 48
       },
       "description": "Ditto is a Normal type Pokémon introduced in Generation 1. It is known as the Transform Pokémon.",
-      "image": "132.png"
+      "image": "132.png",
+      "evolution": null
     },
     {
       "id": 133,
@@ -2890,7 +3250,11 @@
         "Speed": 55
       },
       "description": "Eevee is a Normal type Pokémon introduced in Generation 1. It is known as the Evolution Pokémon.",
-      "image": "133.png"
+      "image": "133.png",
+      "evolution": {
+        "id": 134,
+        "niveau_requis": "use Water Stone"
+      }
     },
     {
       "id": 134,
@@ -2910,7 +3274,8 @@
         "Speed": 65
       },
       "description": "Vaporeon is a Water type Pokémon introduced in Generation 1. It is known as the Bubble Jet Pokémon.",
-      "image": "134.png"
+      "image": "134.png",
+      "evolution": null
     },
     {
       "id": 135,
@@ -2930,7 +3295,8 @@
         "Speed": 130
       },
       "description": "Jolteon is an Electric type Pokémon introduced in Generation 1. It is known as the Lightning Pokémon.",
-      "image": "135.png"
+      "image": "135.png",
+      "evolution": null
     },
     {
       "id": 136,
@@ -2950,7 +3316,8 @@
         "Speed": 65
       },
       "description": "Flareon is a Fire type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
-      "image": "136.png"
+      "image": "136.png",
+      "evolution": null
     },
     {
       "id": 137,
@@ -2970,7 +3337,11 @@
         "Speed": 40
       },
       "description": "Porygon is a Normal type Pokémon introduced in Generation 1. It is known as the Virtual Pokémon.",
-      "image": "137.png"
+      "image": "137.png",
+      "evolution": {
+        "id": 233,
+        "niveau_requis": "trade holding Upgrade"
+      }
     },
     {
       "id": 138,
@@ -2994,7 +3365,11 @@
         "Speed": 35
       },
       "description": "Omanyte is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Spiral Pokémon.",
-      "image": "138.png"
+      "image": "138.png",
+      "evolution": {
+        "id": 139,
+        "niveau_requis": 40
+      }
     },
     {
       "id": 139,
@@ -3018,7 +3393,8 @@
         "Speed": 55
       },
       "description": "Omastar is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Spiral Pokémon.",
-      "image": "139.png"
+      "image": "139.png",
+      "evolution": null
     },
     {
       "id": 140,
@@ -3042,7 +3418,11 @@
         "Speed": 55
       },
       "description": "Kabuto is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
-      "image": "140.png"
+      "image": "140.png",
+      "evolution": {
+        "id": 141,
+        "niveau_requis": 40
+      }
     },
     {
       "id": 141,
@@ -3066,7 +3446,8 @@
         "Speed": 80
       },
       "description": "Kabutops is a Rock/Water type Pokémon introduced in Generation 1. It is known as the Shellfish Pokémon.",
-      "image": "141.png"
+      "image": "141.png",
+      "evolution": null
     },
     {
       "id": 142,
@@ -3090,7 +3471,8 @@
         "Speed": 130
       },
       "description": "Aerodactyl is a Rock/Flying type Pokémon introduced in Generation 1. It is known as the Fossil Pokémon.",
-      "image": "142.png"
+      "image": "142.png",
+      "evolution": null
     },
     {
       "id": 143,
@@ -3110,7 +3492,8 @@
         "Speed": 30
       },
       "description": "Snorlax is a Normal type Pokémon introduced in Generation 1. It is known as the Sleeping Pokémon.",
-      "image": "143.png"
+      "image": "143.png",
+      "evolution": null
     },
     {
       "id": 144,
@@ -3134,7 +3517,8 @@
         "Speed": 85
       },
       "description": "Articuno is an Ice/Flying type Pokémon introduced in Generation 1. It is known as the Freeze Pokémon.",
-      "image": "144.png"
+      "image": "144.png",
+      "evolution": null
     },
     {
       "id": 145,
@@ -3158,7 +3542,8 @@
         "Speed": 100
       },
       "description": "Zapdos is an Electric/Flying type Pokémon introduced in Generation 1. It is known as the Electric Pokémon.",
-      "image": "145.png"
+      "image": "145.png",
+      "evolution": null
     },
     {
       "id": 146,
@@ -3182,7 +3567,8 @@
         "Speed": 90
       },
       "description": "Moltres is a Fire/Flying type Pokémon introduced in Generation 1. It is known as the Flame Pokémon.",
-      "image": "146.png"
+      "image": "146.png",
+      "evolution": null
     },
     {
       "id": 147,
@@ -3202,7 +3588,11 @@
         "Speed": 50
       },
       "description": "Dratini is a Dragon type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
-      "image": "147.png"
+      "image": "147.png",
+      "evolution": {
+        "id": 148,
+        "niveau_requis": 30
+      }
     },
     {
       "id": 148,
@@ -3222,7 +3612,11 @@
         "Speed": 70
       },
       "description": "Dragonair is a Dragon type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
-      "image": "148.png"
+      "image": "148.png",
+      "evolution": {
+        "id": 149,
+        "niveau_requis": 55
+      }
     },
     {
       "id": 149,
@@ -3246,7 +3640,8 @@
         "Speed": 80
       },
       "description": "Dragonite is a Dragon/Flying type Pokémon introduced in Generation 1. It is known as the Dragon Pokémon.",
-      "image": "149.png"
+      "image": "149.png",
+      "evolution": null
     },
     {
       "id": 150,
@@ -3266,7 +3661,8 @@
         "Speed": 130
       },
       "description": "Mewtwo is a Psychic type Pokémon introduced in Generation 1. It is known as the Genetic Pokémon.",
-      "image": "150.png"
+      "image": "150.png",
+      "evolution": null
     },
     {
       "id": 151,
@@ -3286,6 +3682,8 @@
         "Speed": 100
       },
       "description": "Mew is a Psychic type Pokémon introduced in Generation 1. It is known as the New Species Pokémon.",
-      "image": "151.png"
+      "image": "151.png",
+      "evolution": null
     }
-  ]}
+  ]
+}
