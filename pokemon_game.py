@@ -258,7 +258,7 @@ class PokemonGame:
         # HP text
         hp_text = self.font.render(f"{pokemon.hp} {pokemon.hp_max}", True, self.BLACK)
         if not is_opponent:
-            self.screen.blit(hp_text, (position[0]-75, position[1]+57))
+            self.screen.blit(hp_text, (position[0]-70, position[1]+57))
 
     def draw_end_screen(self, message):
         self.screen.fill(self.BLACK)
@@ -281,6 +281,7 @@ class PokemonGame:
             self.your_pokemon = self.pm.get_pokemon(1)  # Default to Bulbasaur if none selected
         self.your_pokemon.heal_hp(999)
         self.opponent_pokemon = self.pm.get_pokemon(random.randint(1, 151))
+        self.opponent_pokemon.lvl = self.your_pokemon.lvl+(random.randint(-2,2))
         self.battle = Combat(self.your_pokemon, self.opponent_pokemon)
         self.state = "BATTLE"
         if self.current_player:
@@ -295,7 +296,10 @@ class PokemonGame:
         if self.opponent_pokemon.ko:
             self.state = "END"
             self.end_message = "You Win!"
-            return
+            self.your_pokemon.xp+=(50*self.opponent_pokemon.lvl)
+            if self.your_pokemon.check_evolution():
+                pygame.display.flip()
+            
 
         # Opponent's turn
         pygame.time.delay(1000)  # Add delay for opponent's turn

@@ -38,7 +38,7 @@ class Combat:
                 attacker.types,
                 defender.types
             )
-            level = 50  #default level
+            level = attacker.lvl  #attacker level
             attack = attacker.base.get('Attack', 50)
             defense = defender.base.get('Defense', 50)
 
@@ -84,10 +84,6 @@ def game(): #setting all the elements to monitor the game
     running = True
     pm = PokemonManager()
     your_pokemon = pm.get_pokemon(1)
-    """
-    choosed_pokemon=int(input('Which Pokemon do you want to choose?'))
-    your_pokemon = pm.get_pokemon(choosed_pokemon) #we pick your_pokemon to play
-    """
     history = []
     pokemons_fought = []
     pokemon_to_fight = random.randint(1,151)
