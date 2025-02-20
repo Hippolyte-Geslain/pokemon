@@ -63,7 +63,7 @@ class PokemonGame:
         # Music
         try:
             pygame.mixer.music.load("music/Title Screen - Dragon Ball Z Dokkan Battle OST Extended.mp3")
-            pygame.mixer.music.set_volume(0.5)
+            pygame.mixer.music.set_volume(0.2)
             pygame.mixer.music.play(-1)
         except pygame.error as e:
             print(f"Failed to load or play music: {e}")
@@ -279,6 +279,7 @@ class PokemonGame:
             self.your_pokemon = self.pm.get_pokemon(self.selected_pokemon)
         else:
             self.your_pokemon = self.pm.get_pokemon(1)  # Default to Bulbasaur if none selected
+        self.your_pokemon.heal_hp(999)
         self.opponent_pokemon = self.pm.get_pokemon(random.randint(1, 151))
         self.battle = Combat(self.your_pokemon, self.opponent_pokemon)
         self.state = "BATTLE"

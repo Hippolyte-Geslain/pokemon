@@ -1,56 +1,11 @@
 {
-    "hippo": {
-        "fought_pokemon": [
-            1,
-            121,
-            44,
-            88,
-            128,
-            25,
-            117,
-            48,
-            113,
-            27,
-            136
-        ],
-        "current_pokemon": null
-    },
-    "salut": {
-        "fought_pokemon": [
-            1,
-            64
-        ],
-        "current_pokemon": null
-    },
-    "gello": {
-        "fought_pokemon": [
-            1,
-            140,
-            48
-        ],
-        "current_pokemon": null
-    },
-    "salu": {
+    "test": {
         "fought_pokemon": [
             1,
             4,
-            7
-        ],
-        "current_pokemon": null
-    },
-    "sal": {
-        "fought_pokemon": [
-            1,
-            4,
-            7
-        ],
-        "current_pokemon": null
-    },
-    "ayo": {
-        "fought_pokemon": [
-            1,
-            4,
-            7
+            7,
+            127,
+            30
         ],
         "current_pokemon": null
     }
