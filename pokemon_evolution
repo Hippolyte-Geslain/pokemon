@@ -1,0 +1,141 @@
+# evolution.py
+class Evolution:
+    def __init__(self, niveau_requis, pokemon_evolution):
+        self.niveau_requis = niveau_requis
+        self.pokemon_evolution = pokemon_evolution
+
+class Pokemon:
+    def __init__(self, nom, niveau=1, pv=100, attaque=10, defense=10):
+        self.nom = nom
+        self.niveau = niveau
+        self.pv = pv
+        self.attaque = attaque
+        self.defense = defense
+        self.experience = 0
+        self.evolution = None  # Stocke l'évolution possible
+        
+    def gagner_experience(self, quantite):
+        self.experience += quantite
+        # Vérifier si le Pokémon peut monter de niveau
+        if self.experience >= self.niveau * 100:
+            self.monter_niveau()
+            
+    def monter_niveau(self):
+        self.niveau += 1
+        self.experience = 0
+        # Augmenter les stats
+        self.pv += 5
+        self.attaque += 2
+        self.defense += 2
+        # Vérifier si une évolution est possible
+        if self.peut_evoluer():
+            return True
+        return False
+        
+    def peut_evoluer(self):
+        return (self.evolution is not None and 
+                self.niveau >= self.evolution.niveau_requis)
+        
+    def evoluer(self):
+        if self.peut_evoluer():
+            # Créer le nouveau Pokémon évolué
+            pokemon_evolue = Pokemon(
+                nom=self.evolution.pokemon_evolution,
+                niveau=self.niveau,
+                pv=self.pv + 20,
+                attaque=self.attaque + 10,
+                defense=self.defense + 10
+            )
+            return pokemon_evolue
+        return None
+
+# gestionnaire_evolution.py
+class GestionnaireEvolution:
+    def __init__(self):
+        # Dictionnaire des évolutions possibles
+        self.evolutions = {
+            "Bulbizarre": Evolution(16, "Herbizarre"),
+            "Herbizarre": Evolution(32, "Florizarre"),
+            "Salamèche": Evolution(16, "Reptincel"),
+            "Reptincel": Evolution(36, "Dracaufeu"),
+            "Carapuce": Evolution(16, "Carabaffe"),
+            "Carabaffe": Evolution(36, "Tortank")
+        }
+    
+    def configurer_evolution(self, pokemon):
+        if pokemon.nom in self.evolutions:
+            pokemon.evolution = self.evolutions[pokemon.nom]
+
+# exemple_jeu.py
+import pygame
+import sys
+
+class JeuPokemon:
+    def __init__(self):
+        pygame.init()
+        self.ecran = pygame.display.set_mode((800, 600))
+        self.clock = pygame.time.Clock()
+        self.gestionnaire = GestionnaireEvolution()
+        
+        # Créer un Pokémon de départ
+        self.pokemon_actuel = Pokemon("Bulbizarre")
+        self.gestionnaire.configurer_evolution(self.pokemon_actuel)
+        
+        # Couleurs
+        self.BLANC = (255, 255, 255)
+        self.NOIR = (0, 0, 0)
+        self.VERT = (0, 255, 0)
+        
+        self.police = pygame.font.Font(None, 36)
+        
+    def afficher_infos_pokemon(self):
+        self.ecran.fill(self.BLANC)
+        
+        # Afficher les informations du Pokémon
+        infos = [
+            f"Nom: {self.pokemon_actuel.nom}",
+            f"Niveau: {self.pokemon_actuel.niveau}",
+            f"EXP: {self.pokemon_actuel.experience}",
+            f"PV: {self.pokemon_actuel.pv}",
+            f"Attaque: {self.pokemon_actuel.attaque}",
+            f"Défense: {self.pokemon_actuel.defense}"
+        ]
+        
+        for i, info in enumerate(infos):
+            texte = self.police.render(info, True, self.NOIR)
+            self.ecran.blit(texte, (50, 50 + i * 40))
+        
+        # Afficher le bouton pour gagner de l'expérience
+        pygame.draw.rect(self.ecran, self.VERT, (300, 500, 200, 50))
+        texte = self.police.render("Gagner EXP", True, self.NOIR)
+        self.ecran.blit(texte, (330, 515))
+        
+    def executer(self):
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                    
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    x, y = pygame.mouse.get_pos()
+                    # Si le bouton "Gagner EXP" est cliqué
+                    if 300 <= x <= 500 and 500 <= y <= 550:
+                        self.pokemon_actuel.gagner_experience(50)
+                        
+                        # Vérifier l'évolution après avoir gagné de l'expérience
+                        if self.pokemon_actuel.peut_evoluer():
+                            nouveau_pokemon = self.pokemon_actuel.evoluer()
+                            if nouveau_pokemon:
+                                self.pokemon_actuel = nouveau_pokemon
+                                # Configurer la prochaine évolution possible
+                                self.gestionnaire.configurer_evolution(self.pokemon_actuel)
+            
+            self.afficher_infos_pokemon()
+            pygame.display.flip()
+            self.clock.tick(60)
+
+# main.py
+if __name__ == "__main__":
+    jeu = JeuPokemon()
+    jeu.executer()
